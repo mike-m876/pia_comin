@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- Splash Screen -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.drinksafe.manager.ui.splash.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splash_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+
+    <!-- Dashboard Principal -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.drinksafe.manager.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_dashboard_to_registrar"
+            app:destination="@id/registrarBebidaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_dashboard_to_listaBebidas"
+            app:destination="@id/listaBebidasFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Registrar Nueva Bebida -->
+    <fragment
+        android:id="@+id/registrarBebidaFragment"
+        android:name="com.drinksafe.manager.ui.register.RegistrarBebidaFragment"
+        android:label="Registrar bebida"
+        tools:layout="@layout/fragment_registrar_bebida" />
+
+    <!-- Lista / Base de Datos de Bebidas -->
+    <fragment
+        android:id="@+id/listaBebidasFragment"
+        android:name="com.drinksafe.manager.ui.database.ListaBebidasFragment"
+        android:label="Base de datos"
+        tools:layout="@layout/fragment_lista_bebidas">
+
+        <action
+            android:id="@+id/action_listaBebidas_to_detalleBebida"
+            app:destination="@id/detalleBebidaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_listaBebidas_to_registrar"
+            app:destination="@id/registrarBebidaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Detalle de Bebida -->
+    <fragment
+        android:id="@+id/detalleBebidaFragment"
+        android:name="com.drinksafe.manager.ui.detail.DetalleBebidaFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_detalle_bebida" />
+
+</navigation>

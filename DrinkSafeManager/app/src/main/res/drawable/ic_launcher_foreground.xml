@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Reutilizando el diseño de ic_drinksafe_logo ajustado a 108dp -->
+    <path
+        android:pathData="M42,25 L78,25 L70,65 L50,65 Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M50,65 L50,80 L70,80 L70,65 Z"
+        android:fillColor="#E3F2FD" />
+    <path
+        android:pathData="M40,80 L80,80 L80,85 L40,85 Z"
+        android:fillColor="#FFFFFF" />
+</vector>

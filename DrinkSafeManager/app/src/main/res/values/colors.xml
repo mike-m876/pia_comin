@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Paleta principal DrinkSafe ===== -->
+
+    <!-- Azul oscuro: fondo principal, AppBar, cards header -->
+    <color name="azul_oscuro">#0D1B2A</color>
+
+    <!-- Azul marino intermedio -->
+    <color name="azul_marino">#1B2A4A</color>
+
+    <!-- Azul tecnológico: acentos, íconos activos, enlaces -->
+    <color name="azul_tecnologico">#2196F3</color>
+
+    <!-- Azul tecnológico más oscuro para estados pressed -->
+    <color name="azul_tecnologico_oscuro">#1565C0</color>
+
+    <!-- Versión suave del azul tecnológico para fondos de chip/card -->
+    <color name="azul_tecnologico_suave">#E3F2FD</color>
+
+    <!-- Blanco: texto principal sobre fondos oscuros, fondos de card -->
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Fondo general de la app (casi blanco, suave) -->
+    <color name="fondo_claro">#F5F7FA</color>
+
+    <!-- ===== Colores de estado ===== -->
+
+    <!-- Verde para confirmaciones y éxito -->
+    <color name="verde_exito">#4CAF50</color>
+
+    <!-- Verde suave para fondo de chip/card de éxito -->
+    <color name="verde_suave">#E8F5E9</color>
+
+    <!-- Rojo para errores -->
+    <color name="error_color">#F44336</color>
+
+    <!-- ===== Texto ===== -->
+    <color name="texto_primario">#1A1A2E</color>
+    <color name="texto_secundario">#78909C</color>
+
+    <!-- ===== Chips de tipos de bebida ===== -->
+    <color name="chip_vodka">#E3F2FD</color>
+    <color name="chip_tequila">#E8F5E9</color>
+    <color name="chip_otro">#F3E5F5</color>
+
+    <!-- ===== Material Theme required colors ===== -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>

@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_brand.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_brand.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-merged_res-54:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.drinksafe.manager.app-main-56:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_connection_checking.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_connection_checking.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_bg_icon_tertiary.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\bg_icon_tertiary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\slide_in_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_connection_on.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_connection_on.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\slide_out_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_fragment_splash.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\fragment_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_tequila.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_tequila.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_notes.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_notes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_fragment_detalle_bebida.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\fragment_detalle_bebida.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_temperature.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_temperature.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_drinksafe_logo.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_drinksafe_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_item_bebida.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\item_bebida.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_info.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_drink_generic.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_drink_generic.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_connection_off.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_connection_off.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-merged_res-54:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.drinksafe.manager.app-main-56:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_bg_circle_glow.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\bg_circle_glow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_add_drink.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_add_drink.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_bg_icon_secondary.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\bg_icon_secondary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_sensor.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_sensor.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.drinksafe.manager.app-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-merged_res-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.drinksafe.manager.app-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_fragment_lista_bebidas.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\fragment_lista_bebidas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_database.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_database.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_label.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_label.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_conductivity.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_conductivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_alcohol.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_alcohol.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_delete.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_vodka.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_vodka.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\anim\\slide_out_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_bg_icon_primary.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\bg_icon_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\drawable_ic_refresh.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\drawable\\ic_refresh.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\layout_fragment_registrar_bebida.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\layout\\fragment_registrar_bebida.xml"
+    },
+    {
+        "merged": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-merged_res-54:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Villa\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-56:\\navigation\\nav_graph.xml"
+    }
+]

@@ -1,0 +1,1 @@
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.drinksafe.manager.ui.splash.SplashFragmentDirections","com.drinksafe.manager.ui.dashboard.DashboardFragmentDirections","com.drinksafe.manager.ui.database.ListaBebidasFragmentDirections"]}]

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/fragment_detalle_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/fragment_detalle_bebida.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/fragment_lista_bebidas.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/fragment_lista_bebidas.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/fragment_splash.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/activity_main.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/fragment_dashboard.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/item_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/item_bebida.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-53:/layout/fragment_registrar_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-56:/layout/fragment_registrar_bebida.xml"
+    }
+]

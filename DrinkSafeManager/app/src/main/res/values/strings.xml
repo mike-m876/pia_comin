@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DrinkSafe Manager</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="sistema_nombre">DrinkSafe – Sistema detector de alcohol adulterado</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_titulo">DrinkSafe Manager</string>
+    <string name="dashboard_subtitulo">Panel de administración</string>
+    <string name="card_registrar_titulo">Registrar nueva bebida</string>
+    <string name="card_registrar_desc">Captura datos de referencia desde sensores</string>
+    <string name="card_base_datos_titulo">Base de datos de bebidas</string>
+    <string name="card_base_datos_desc">Consulta y gestiona las referencias</string>
+    <string name="card_config_titulo">Configuración del sistema</string>
+    <string name="card_config_desc">IP, sensores y parámetros del dispositivo</string>
+
+    <!-- Conexión Raspberry Pi -->
+    <string name="estado_conectado">Raspberry Pi conectada</string>
+    <string name="estado_desconectado">Dispositivo desconectado</string>
+    <string name="estado_verificando">Verificando conexión…</string>
+
+    <!-- Registro de bebidas -->
+    <string name="registrar_titulo">Registrar bebida</string>
+    <string name="campo_nombre">Nombre de la bebida</string>
+    <string name="campo_marca">Marca o fabricante</string>
+    <string name="campo_notas">Notas adicionales (opcional)</string>
+    <string name="btn_registrar">Registrar bebida</string>
+    <string name="sensor_leyendo">Leyendo sensores…</string>
+    <string name="sensor_guardando">Guardando en base de datos…</string>
+    <string name="registro_exitoso">✓ Bebida registrada correctamente</string>
+
+    <!-- Tipos de bebida -->
+    <string name="tipo_vodka">Vodka</string>
+    <string name="tipo_tequila">Tequila blanco</string>
+    <string name="tipo_otro">Otro</string>
+
+    <!-- Lista de bebidas -->
+    <string name="lista_titulo">Base de datos</string>
+    <string name="buscar_hint">Buscar por nombre o marca…</string>
+    <string name="lista_vacia_titulo">Sin bebidas registradas</string>
+    <string name="lista_vacia_desc">Usa el botón + para registrar tu primera bebida de referencia</string>
+
+    <!-- Detalle -->
+    <string name="detalle_titulo">Detalle de bebida</string>
+    <string name="datos_espectrales">Datos espectrales AS7262</string>
+
+    <!-- Errores y validaciones -->
+    <string name="error_nombre_requerido">Ingresa el nombre de la bebida</string>
+    <string name="error_marca_requerida">Ingresa la marca</string>
+    <string name="error_tipo_requerido">Selecciona el tipo de bebida</string>
+
+</resources>

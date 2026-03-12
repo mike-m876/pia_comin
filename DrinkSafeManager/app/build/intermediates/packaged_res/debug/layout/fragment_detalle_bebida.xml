@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_oscuro"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Detalle de bebida"
+            app:titleTextColor="@color/blanco"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/blanco" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header card con nombre y marca -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/azul_oscuro"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_icono_bebida"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_drink_generic"
+                        android:contentDescription="Ícono de bebida"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_nombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blanco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_marca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marca"
+                        android:textSize="16sp"
+                        android:textColor="#80FFFFFF"
+                        android:layout_marginTop="4dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_tipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo"
+                        android:textColor="@color/azul_oscuro"
+                        app:chipBackgroundColor="@color/azul_tecnologico"
+                        android:layout_marginTop="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_fecha_registro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registrada el --/--/----"
+                        android:textSize="12sp"
+                        android:textColor="#50FFFFFF"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Datos de análisis -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultados del análisis"
+                android:textSize="13sp"
+                android:textColor="@color/texto_secundario"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Grid de datos sensoriales -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Alcohol -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/blanco"
+                    app:cardElevation="2dp"
+                    android:layout_marginEnd="6dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                            android:src="@drawable/ic_alcohol" android:tint="@color/azul_oscuro"
+                            android:contentDescription="Alcohol" android:layout_marginBottom="8dp" />
+                        <TextView android:id="@+id/tv_alcohol_valor"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0.0%" android:textSize="22sp" android:textStyle="bold"
+                            android:textColor="@color/azul_oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Alcohol estimado" android:textSize="11sp"
+                            android:textColor="@color/texto_secundario" android:layout_marginTop="4dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Conductividad -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/blanco"
+                    app:cardElevation="2dp"
+                    android:layout_marginStart="6dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                            android:src="@drawable/ic_conductivity" android:tint="@color/verde_exito"
+                            android:contentDescription="Conductividad" android:layout_marginBottom="8dp" />
+                        <TextView android:id="@+id/tv_conductividad_valor"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0 µS/cm" android:textSize="18sp" android:textStyle="bold"
+                            android:textColor="@color/verde_exito" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Conductividad" android:textSize="11sp"
+                            android:textColor="@color/texto_secundario" android:layout_marginTop="4dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Temperatura -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/blanco"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                        android:src="@drawable/ic_temperature" android:tint="@color/azul_tecnologico"
+                        android:contentDescription="Temperatura" android:layout_marginEnd="16dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Temperatura de la muestra"
+                        android:textSize="14sp" android:textColor="@color/texto_secundario" />
+                    <TextView android:id="@+id/tv_temperatura_valor"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0.0 °C" android:textSize="18sp" android:textStyle="bold"
+                        android:textColor="@color/azul_tecnologico" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Datos espectrales AS7262 -->
+            <LinearLayout
+                android:id="@+id/layout_espectral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos espectrales AS7262"
+                    android:textSize="13sp"
+                    android:textColor="@color/texto_secundario"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/blanco"
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="16dp">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:rowCount="2"
+                        android:padding="16dp">
+
+                        <!-- 450nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#7B68EE" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_450" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="450nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                        <!-- 500nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#4169E1" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_500" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="500nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                        <!-- 550nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#32CD32" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_550" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="550nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                        <!-- 570nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#FFD700" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_570" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="570nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                        <!-- 600nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#FF8C00" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_600" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="600nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                        <!-- 650nm -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_columnWeight="1" android:orientation="vertical"
+                            android:gravity="center" android:padding="8dp">
+                            <View android:layout_width="20dp" android:layout_height="8dp"
+                                android:background="#DC143C" android:layout_gravity="center"
+                                android:layout_marginBottom="4dp" />
+                            <TextView android:id="@+id/tv_canal_650" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                android:textStyle="bold" android:textColor="@color/texto_primario" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="650nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                        </LinearLayout>
+
+                    </GridLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Notas -->
+            <LinearLayout
+                android:id="@+id/layout_notas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notas del operador"
+                    android:textSize="13sp"
+                    android:textColor="@color/texto_secundario"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/blanco"
+                    app:cardElevation="2dp">
+                    <TextView
+                        android:id="@+id/tv_notas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/texto_primario" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="24dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

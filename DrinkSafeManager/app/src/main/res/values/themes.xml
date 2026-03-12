@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Tema principal de DrinkSafe Manager.
+        Basado en Material Design 3 con paleta azul oscuro / tecnológico.
+    -->
+    <style name="Theme.DrinkSafe" parent="Theme.Material3.Light.NoActionBar">
+
+        <!-- Color primario: azul oscuro -->
+        <item name="colorPrimary">@color/azul_oscuro</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorPrimaryContainer">@color/azul_tecnologico_suave</item>
+        <item name="colorOnPrimaryContainer">@color/azul_oscuro</item>
+
+        <!-- Color secundario: azul tecnológico -->
+        <item name="colorSecondary">@color/azul_tecnologico</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="colorSecondaryContainer">@color/azul_tecnologico_suave</item>
+
+        <!-- Color terciario: verde -->
+        <item name="colorTertiary">@color/verde_exito</item>
+        <item name="colorOnTertiary">@color/blanco</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/error_color</item>
+
+        <!-- Fondo general -->
+        <item name="android:colorBackground">@color/fondo_claro</item>
+        <item name="colorSurface">@color/blanco</item>
+        <item name="colorOnSurface">@color/texto_primario</item>
+
+        <!-- Status bar y navigation bar -->
+        <item name="android:statusBarColor">@color/azul_oscuro</item>
+        <item name="android:navigationBarColor">@color/azul_oscuro</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Tipografía -->
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- Shapes para Material3 -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeLarge</item>
+
+    </style>
+
+    <!-- Tema para el Splash Screen (sin ActionBar, fondo oscuro) -->
+    <style name="Theme.DrinkSafe.Splash" parent="Theme.DrinkSafe">
+        <item name="android:windowBackground">@color/azul_oscuro</item>
+    </style>
+
+    <!-- Shapes personalizadas -->
+    <style name="ShapeSmall" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeMedium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeLarge" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+</resources>
