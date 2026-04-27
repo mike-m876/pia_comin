@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_oscuro"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Base de datos"
+            app:titleTextColor="@color/blanco"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/blanco" />
+
+        <!-- Barra de búsqueda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="#1AFFFFFF"
+                app:boxStrokeColor="#40FFFFFF"
+                app:hintTextColor="@color/blanco"
+                app:startIconDrawable="@drawable/ic_search"
+                app:startIconTint="#80FFFFFF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_buscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Buscar por nombre o marca..."
+                    android:textColor="@color/blanco"
+                    android:textColorHint="#80FFFFFF"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Contador -->
+        <TextView
+            android:id="@+id/tv_contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 bebidas"
+            android:textSize="12sp"
+            android:textColor="@color/texto_secundario"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp" />
+
+        <!-- RecyclerView principal -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_bebidas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false" />
+
+        <!-- Estado vacío -->
+        <LinearLayout
+            android:id="@+id/layout_vacio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_database"
+                android:contentDescription="Base de datos vacía"
+                android:tint="@color/texto_secundario"
+                android:alpha="0.4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin bebidas registradas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/texto_primario"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usa el botón + para registrar\ntu primera bebida de referencia"
+                android:textSize="14sp"
+                android:textColor="@color/texto_secundario"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- FAB para agregar -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva bebida"
+        app:icon="@drawable/ic_add_drink"
+        app:backgroundTint="@color/azul_oscuro"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

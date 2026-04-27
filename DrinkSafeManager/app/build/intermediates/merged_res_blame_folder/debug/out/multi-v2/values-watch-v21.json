@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.drinksafe.manager.app-mergeDebugResources-52:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.drinksafe.manager.app-mergeDebugResources-59:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Villa\\.gradle\\caches\\transforms-3\\e83eac11f1812a63e5cd1ee40e2be71a\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\Leona\\.gradle\\caches\\transforms-3\\b9a7a8d23a9ade9ba37b8b44aca070f6\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "849272457872",
+    "project_id": "drinksafe-92e95",
+    "storage_bucket": "drinksafe-92e95.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849272457872:android:8e9754a620216fed462615",
+        "android_client_info": {
+          "package_name": "com.drinksafe.manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZd7UnLmFEe1uQ4aPd-CCQK8nzZ7LW_8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

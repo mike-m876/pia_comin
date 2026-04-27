@@ -4,11 +4,15 @@ import androidx.lifecycle.*
 import com.drinksafe.manager.data.models.Bebida
 import com.drinksafe.manager.data.repository.BebidaRepository
 import com.drinksafe.manager.utils.SensorSimulator
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.net.InetSocketAddress
+import java.net.Socket
 
 /**
  * Estados posibles para el proceso de registro de una bebida.
@@ -32,36 +36,28 @@ sealed class ConexionState {
 
 /**
  * ViewModel principal para la gestión de bebidas en DrinkSafe Manager.
- * Maneja toda la lógica de negocio entre la UI y el repositorio.
  */
 class BebidaViewModel(private val repository: BebidaRepository) : ViewModel() {
 
-    // -------------------------
-    // LiveData / StateFlow
-    // -------------------------
+    // Configuración de la Raspberry Pi (AJUSTAR SEGÚN TU RED)
+    private val RASPBERRY_IP = "192.168.1.100" 
+    private val RASPBERRY_PORT = 80 // O el puerto que use tu servicio en la Pi
 
-    /** Lista reactiva de todas las bebidas */
     val todasLasBebidas: LiveData<List<Bebida>> = repository.todasLasBebidas.asLiveData()
-
-    /** Total de bebidas registradas */
     val totalBebidas: LiveData<Int> = repository.totalBebidas.asLiveData()
 
-    /** Estado del proceso de registro */
     private val _registroState = MutableStateFlow<RegistroState>(RegistroState.Idle)
     val registroState: StateFlow<RegistroState> = _registroState.asStateFlow()
 
-    /** Estado de conexión con la Raspberry Pi */
     private val _conexionState = MutableStateFlow<ConexionState>(ConexionState.Verificando)
     val conexionState: StateFlow<ConexionState> = _conexionState.asStateFlow()
 
-    /** Resultados de búsqueda */
     private val _busquedaQuery = MutableLiveData("")
     val resultadosBusqueda: LiveData<List<Bebida>> = _busquedaQuery.switchMap { query ->
         if (query.isBlank()) repository.todasLasBebidas.asLiveData()
         else repository.buscar(query).asLiveData()
     }
 
-    /** Bebida seleccionada para detalle */
     private val _bebidaSeleccionada = MutableLiveData<Bebida?>()
     val bebidaSeleccionada: LiveData<Bebida?> = _bebidaSeleccionada
 
@@ -69,25 +65,40 @@ class BebidaViewModel(private val repository: BebidaRepository) : ViewModel() {
         verificarConexionRaspberry()
     }
 
-    // -------------------------
-    // Acciones de registro
-    // -------------------------
-
     /**
-     * Registra una nueva bebida con simulación de lectura de sensores.
-     * Flujo: simular sensores → generar datos → guardar en DB
+     * Verifica la conexión real con la Raspberry Pi intentando abrir un socket.
      */
+    fun verificarConexionRaspberry() {
+        viewModelScope.launch {
+            _conexionState.value = ConexionState.Verificando
+            
+            val estaConectado = withContext(Dispatchers.IO) {
+                try {
+                    val socket = Socket()
+                    // Intenta conectar con un timeout de 2 segundos
+                    socket.connect(InetSocketAddress(RASPBERRY_IP, RASPBERRY_PORT), 2000)
+                    socket.close()
+                    true
+                } catch (e: Exception) {
+                    false
+                }
+            }
+
+            _conexionState.value = if (estaConectado) {
+                ConexionState.Conectado
+            } else {
+                ConexionState.Desconectado
+            }
+        }
+    }
+
     fun registrarBebida(nombre: String, marca: String, tipo: String, notas: String = "") {
         viewModelScope.launch {
             try {
-                // Paso 1: Simular lectura de sensores
                 _registroState.value = RegistroState.SimulandoSensores
-                delay(2500) // Simula tiempo de lectura real de sensores
-
-                // Paso 2: Generar datos simulados del hardware
+                delay(2500) 
                 val datosSimulados = SensorSimulator.generarDatosSensoriales(tipo)
 
-                // Paso 3: Crear objeto Bebida
                 val bebida = Bebida(
                     nombre = nombre.trim(),
                     marca = marca.trim(),
@@ -100,83 +111,21 @@ class BebidaViewModel(private val repository: BebidaRepository) : ViewModel() {
                 )
 
                 _registroState.value = RegistroState.Guardando(bebida)
-                delay(500) // Pequeña pausa visual
-
-                // Paso 4: Guardar en base de datos
+                delay(500) 
                 repository.insertar(bebida)
-
                 _registroState.value = RegistroState.Exitoso(bebida)
 
             } catch (e: Exception) {
-                _registroState.value = RegistroState.Error(
-                    "Error al registrar la bebida: ${e.message}"
-                )
+                _registroState.value = RegistroState.Error("Error: ${e.message}")
             }
         }
     }
 
-    /** Reinicia el estado de registro para poder registrar otra bebida */
-    fun resetRegistroState() {
-        _registroState.value = RegistroState.Idle
-    }
-
-    // -------------------------
-    // Acciones sobre bebidas
-    // -------------------------
-
-    /** Elimina una bebida de la base de datos */
-    fun eliminarBebida(bebida: Bebida) {
-        viewModelScope.launch {
-            repository.eliminar(bebida)
-        }
-    }
-
-    /** Selecciona una bebida para ver su detalle */
-    fun seleccionarBebida(bebida: Bebida) {
-        _bebidaSeleccionada.value = bebida
-    }
-
-    /** Carga una bebida específica por ID */
-    fun cargarBebidaPorId(id: Int) {
-        viewModelScope.launch {
-            _bebidaSeleccionada.value = repository.obtenerPorId(id)
-        }
-    }
-
-    // -------------------------
-    // Búsqueda
-    // -------------------------
-
-    /** Actualiza el query de búsqueda */
-    fun buscar(query: String) {
-        _busquedaQuery.value = query
-    }
-
-    // -------------------------
-    // Conexión Raspberry Pi
-    // -------------------------
-
-    /**
-     * Simula la verificación de conexión con la Raspberry Pi.
-     * En una app real, haría una petición HTTP a la IP del dispositivo.
-     */
-    fun verificarConexionRaspberry() {
-        viewModelScope.launch {
-            _conexionState.value = ConexionState.Verificando
-            delay(1500) // Simula tiempo de ping
-            // Simulación: 70% probabilidad de estar conectado
-            val conectado = (1..10).random() <= 7
-            _conexionState.value = if (conectado) {
-                ConexionState.Conectado
-            } else {
-                ConexionState.Desconectado
-            }
-        }
-    }
-
-    // -------------------------
-    // Factory
-    // -------------------------
+    fun resetRegistroState() { _registroState.value = RegistroState.Idle }
+    fun eliminarBebida(bebida: Bebida) { viewModelScope.launch { repository.eliminar(bebida) } }
+    fun seleccionarBebida(bebida: Bebida) { _bebidaSeleccionada.value = bebida }
+    fun cargarBebidaPorId(id: Int) { viewModelScope.launch { _bebidaSeleccionada.value = repository.obtenerPorId(id) } }
+    fun buscar(query: String) { _busquedaQuery.value = query }
 
     class Factory(private val repository: BebidaRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -184,7 +133,7 @@ class BebidaViewModel(private val repository: BebidaRepository) : ViewModel() {
                 @Suppress("UNCHECKED_CAST")
                 return BebidaViewModel(repository) as T
             }
-            throw IllegalArgumentException("ViewModel desconocido: ${modelClass.name}")
+            throw IllegalArgumentException("ViewModel desconocido")
         }
     }
 }

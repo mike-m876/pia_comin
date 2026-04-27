@@ -164,9 +164,15 @@ string error_tipo_requerido
 string estado_conectado
 string estado_desconectado
 string estado_verificando
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string lista_titulo
 string lista_vacia_desc
 string lista_vacia_titulo
+string project_id
 string registrar_titulo
 string registro_exitoso
 string sensor_guardando

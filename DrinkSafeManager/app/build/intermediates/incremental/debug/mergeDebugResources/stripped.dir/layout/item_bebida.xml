@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/blanco"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Icono del tipo de bebida -->
+        <LinearLayout
+            android:id="@+id/layout_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_icon_primary"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_tipo_bebida"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_drink_generic"
+                android:contentDescription="Tipo de bebida"
+                android:tint="@color/blanco" />
+        </LinearLayout>
+
+        <!-- Nombre de la bebida -->
+        <TextView
+            android:id="@+id/tv_nombre_bebida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/azul_oscuro"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@id/layout_icon"
+            app:layout_constraintEnd_toStartOf="@id/btn_eliminar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Marca -->
+        <TextView
+            android:id="@+id/tv_marca_bebida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Marca"
+            android:textSize="13sp"
+            android:textColor="@color/texto_secundario"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toEndOf="@id/layout_icon"
+            app:layout_constraintEnd_toStartOf="@id/btn_eliminar"
+            app:layout_constraintTop_toBottomOf="@id/tv_nombre_bebida" />
+
+        <!-- Fila inferior: chip tipo + datos sensor -->
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/layout_icon"
+            app:layout_constraintEnd_toStartOf="@id/btn_eliminar"
+            app:layout_constraintTop_toBottomOf="@id/tv_marca_bebida">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="Tipo"
+                android:textSize="11sp"
+                app:chipMinHeight="28dp" />
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+            <!-- Alcohol % -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="12dp">
+                <TextView
+                    android:id="@+id/tv_alcohol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/azul_oscuro" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="alcohol"
+                    android:textSize="9sp"
+                    android:textColor="@color/texto_secundario" />
+            </LinearLayout>
+
+            <!-- Temperatura -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20°C"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/azul_tecnologico" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="temp."
+                    android:textSize="9sp"
+                    android:textColor="@color/texto_secundario" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Fecha de registro -->
+        <TextView
+            android:id="@+id/tv_fecha_registro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dd/mm/yyyy"
+            android:textSize="10sp"
+            android:textColor="@color/texto_secundario"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/layout_icon"
+            app:layout_constraintEnd_toStartOf="@id/btn_eliminar"
+            app:layout_constraintTop_toBottomOf="@id/layout_bottom" />
+
+        <!-- Botón eliminar -->
+        <ImageButton
+            android:id="@+id/btn_eliminar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/error_color"
+            android:alpha="0.6"
+            android:contentDescription="Eliminar bebida"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
