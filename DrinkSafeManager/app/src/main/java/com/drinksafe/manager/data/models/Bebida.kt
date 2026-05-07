@@ -8,12 +8,18 @@ import java.util.Locale
 
 /**
  * Entidad Room que representa una bebida registrada en el sistema DrinkSafe.
- * Almacena los datos de referencia capturados durante el análisis inicial.
+ * Ligada a un usuario específico mediante userId.
  */
 @Entity(tableName = "bebidas")
 data class Bebida(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+
+    /** ID del usuario que registró la bebida (Firebase UID) */
+    val userId: String = "",
+
+    /** Código de sincronización para identificar el dispositivo/usuario en Python */
+    val syncCode: String = "",
 
     /** Nombre comercial de la bebida */
     val nombre: String,

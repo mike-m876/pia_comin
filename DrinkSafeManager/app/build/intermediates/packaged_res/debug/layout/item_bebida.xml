@@ -33,7 +33,7 @@
                 android:layout_height="26dp"
                 android:src="@drawable/ic_drink_generic"
                 android:contentDescription="Tipo de bebida"
-                android:tint="@color/blanco" />
+                app:tint="@color/blanco" />
         </LinearLayout>
 
         <!-- Nombre de la bebida -->
@@ -155,7 +155,7 @@
             android:layout_height="36dp"
             android:src="@drawable/ic_delete"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@color/error_color"
+            app:tint="@color/error_color"
             android:alpha="0.6"
             android:contentDescription="Eliminar bebida"
             app:layout_constraintEnd_toEndOf="parent"

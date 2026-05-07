@@ -95,7 +95,7 @@
                 android:layout_height="80dp"
                 android:src="@drawable/ic_database"
                 android:contentDescription="Base de datos vacía"
-                android:tint="@color/texto_secundario"
+                app:tint="@color/texto_secundario"
                 android:alpha="0.4" />
 
             <TextView

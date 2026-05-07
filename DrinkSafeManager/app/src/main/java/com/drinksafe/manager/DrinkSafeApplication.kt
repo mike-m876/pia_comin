@@ -3,12 +3,11 @@ package com.drinksafe.manager
 import android.app.Application
 import com.drinksafe.manager.data.database.DrinkSafeDatabase
 import com.drinksafe.manager.data.repository.BebidaRepository
+import com.drinksafe.manager.data.repository.PerfilRepository
 
 /**
  * Clase Application principal de DrinkSafe Manager.
- * Inicializa los componentes globales de la aplicación:
- * - Base de datos Room
- * - Repositorio de bebidas
+ * Inicializa los componentes globales de la aplicación.
  */
 class DrinkSafeApplication : Application() {
 
@@ -20,5 +19,10 @@ class DrinkSafeApplication : Application() {
     /** Repositorio de bebidas disponible globalmente */
     val bebidaRepository: BebidaRepository by lazy {
         BebidaRepository(database.bebidaDao())
+    }
+
+    /** Repositorio de perfil disponible globalmente */
+    val perfilRepository: PerfilRepository by lazy {
+        PerfilRepository(database.perfilDao(), database.bebidaDao())
     }
 }

@@ -62,7 +62,7 @@
                             android:layout_height="24dp"
                             android:src="@drawable/ic_info"
                             android:contentDescription="Información"
-                            android:tint="@color/azul_tecnologico" />
+                            app:tint="@color/azul_tecnologico" />
 
                         <TextView
                             android:layout_width="0dp"

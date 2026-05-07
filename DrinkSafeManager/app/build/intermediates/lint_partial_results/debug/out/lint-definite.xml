@@ -1,0 +1,2670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_settings.xml"
+            line="6"
+            column="27"
+            startOffset="284"
+            endLine="6"
+            endColumn="931"
+            endOffset="1188"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DrinkSafe Manager&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="30"
+            column="21"
+            startOffset="1176"
+            endLine="30"
+            endColumn="53"
+            endOffset="1208"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Panel de administración&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="38"
+            column="21"
+            startOffset="1523"
+            endLine="38"
+            endColumn="59"
+            endOffset="1561"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Perfil de Usuario&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="62"
+            column="17"
+            startOffset="2446"
+            endLine="62"
+            endColumn="49"
+            endOffset="2478"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                dot="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="90"
+            column="26"
+            startOffset="3691"
+            endLine="90"
+            endColumn="35"
+            endOffset="3700"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Usuario DrinkSafe&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="107"
+            column="33"
+            startOffset="4567"
+            endLine="107"
+            endColumn="65"
+            endOffset="4599"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;ID Sync: ----&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="116"
+            column="33"
+            startOffset="5065"
+            endLine="116"
+            endColumn="61"
+            endOffset="5093"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Generar ID&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="127"
+            column="29"
+            startOffset="5675"
+            endLine="127"
+            endColumn="54"
+            endOffset="5700"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Usa este ID en tu Raspberry Pi para sincronizar el acceso.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="133"
+            column="25"
+            startOffset="5922"
+            endLine="133"
+            endColumn="98"
+            endOffset="5995"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Estado del sistema&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="144"
+            column="17"
+            startOffset="6450"
+            endLine="144"
+            endColumn="50"
+            endOffset="6483"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Estado de conexión&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="175"
+            column="25"
+            startOffset="7908"
+            endLine="175"
+            endColumn="72"
+            endOffset="7955"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Raspberry Pi 4&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="187"
+            column="29"
+            startOffset="8474"
+            endLine="187"
+            endColumn="58"
+            endOffset="8503"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Verificando...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="196"
+            column="29"
+            startOffset="8940"
+            endLine="196"
+            endColumn="58"
+            endOffset="8969"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0 bebidas registradas&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="205"
+            column="29"
+            startOffset="9420"
+            endLine="205"
+            endColumn="65"
+            endOffset="9456"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Actualizar conexión&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="217"
+            column="25"
+            startOffset="10048"
+            endLine="217"
+            endColumn="73"
+            endOffset="10096"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Acciones rápidas&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="227"
+            column="17"
+            startOffset="10462"
+            endLine="227"
+            endColumn="48"
+            endOffset="10493"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Agregar bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="262"
+            column="29"
+            startOffset="12109"
+            endLine="262"
+            endColumn="72"
+            endOffset="12152"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Registrar nueva bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="276"
+            column="29"
+            startOffset="12762"
+            endLine="276"
+            endColumn="66"
+            endOffset="12799"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Captura datos de referencia desde sensores&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="284"
+            column="29"
+            startOffset="13175"
+            endLine="284"
+            endColumn="86"
+            endOffset="13232"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ir&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="294"
+            column="25"
+            startOffset="13689"
+            endLine="294"
+            endColumn="56"
+            endOffset="13720"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Base de datos&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="328"
+            column="29"
+            startOffset="15251"
+            endLine="328"
+            endColumn="71"
+            endOffset="15293"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Base de datos de bebidas&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="342"
+            column="29"
+            startOffset="15903"
+            endLine="342"
+            endColumn="68"
+            endOffset="15942"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Consulta y gestiona las referencias&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="350"
+            column="29"
+            startOffset="16318"
+            endLine="350"
+            endColumn="79"
+            endOffset="16368"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ir&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="360"
+            column="25"
+            startOffset="16825"
+            endLine="360"
+            endColumn="56"
+            endOffset="16856"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Configuración&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="395"
+            column="29"
+            startOffset="18442"
+            endLine="395"
+            endColumn="71"
+            endOffset="18484"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Configuración del sistema&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="409"
+            column="29"
+            startOffset="19094"
+            endLine="409"
+            endColumn="69"
+            endOffset="19134"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;IP, sensores y parámetros del dispositivo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="417"
+            column="29"
+            startOffset="19510"
+            endLine="417"
+            endColumn="85"
+            endOffset="19566"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ir&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="427"
+            column="25"
+            startOffset="20023"
+            endLine="427"
+            endColumn="56"
+            endOffset="20054"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DrinkSafe · Sistema de detección de alcohol adulterado&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="437"
+            column="17"
+            startOffset="20397"
+            endLine="437"
+            endColumn="86"
+            endOffset="20466"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ícono de bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="58"
+            column="25"
+            startOffset="2501"
+            endLine="58"
+            endColumn="69"
+            endOffset="2545"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="65"
+            column="25"
+            startOffset="2843"
+            endLine="65"
+            endColumn="46"
+            endOffset="2864"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Marca&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="75"
+            column="25"
+            startOffset="3309"
+            endLine="75"
+            endColumn="45"
+            endOffset="3329"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tipo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="84"
+            column="25"
+            startOffset="3756"
+            endLine="84"
+            endColumn="44"
+            endOffset="3775"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Registrada el --/--/----&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="93"
+            column="25"
+            startOffset="4217"
+            endLine="93"
+            endColumn="64"
+            endOffset="4256"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Resultados del análisis&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="105"
+            column="17"
+            startOffset="4710"
+            endLine="105"
+            endColumn="55"
+            endOffset="4748"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Alcohol&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="136"
+            column="29"
+            startOffset="6276"
+            endLine="136"
+            endColumn="65"
+            endOffset="6312"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0.0%&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="139"
+            column="29"
+            startOffset="6551"
+            endLine="139"
+            endColumn="48"
+            endOffset="6570"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Alcohol estimado&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="142"
+            column="29"
+            startOffset="6828"
+            endLine="142"
+            endColumn="60"
+            endOffset="6859"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Conductividad&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="165"
+            column="29"
+            startOffset="8159"
+            endLine="165"
+            endColumn="71"
+            endOffset="8201"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0 µS/cm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="168"
+            column="29"
+            startOffset="8446"
+            endLine="168"
+            endColumn="51"
+            endOffset="8468"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Conductividad&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="171"
+            column="29"
+            startOffset="8726"
+            endLine="171"
+            endColumn="57"
+            endOffset="8754"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Temperatura&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="195"
+            column="25"
+            startOffset="9994"
+            endLine="195"
+            endColumn="65"
+            endOffset="10034"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Temperatura de la muestra&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="197"
+            column="51"
+            startOffset="10216"
+            endLine="197"
+            endColumn="91"
+            endOffset="10256"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0.0 °C&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="201"
+            column="25"
+            startOffset="10546"
+            endLine="201"
+            endColumn="46"
+            endOffset="10567"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Datos espectrales AS7262&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="217"
+            column="21"
+            startOffset="11280"
+            endLine="217"
+            endColumn="60"
+            endOffset="11319"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="247"
+            column="70"
+            startOffset="13030"
+            endLine="247"
+            endColumn="87"
+            endOffset="13047"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;450nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="250"
+            column="33"
+            startOffset="13320"
+            endLine="250"
+            endColumn="53"
+            endOffset="13340"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="250"
+            column="54"
+            startOffset="13341"
+            endLine="250"
+            endColumn="77"
+            endOffset="13364"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="261"
+            column="70"
+            startOffset="14198"
+            endLine="261"
+            endColumn="87"
+            endOffset="14215"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;500nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="264"
+            column="33"
+            startOffset="14488"
+            endLine="264"
+            endColumn="53"
+            endOffset="14508"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="264"
+            column="54"
+            startOffset="14509"
+            endLine="264"
+            endColumn="77"
+            endOffset="14532"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="275"
+            column="70"
+            startOffset="15366"
+            endLine="275"
+            endColumn="87"
+            endOffset="15383"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;550nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="278"
+            column="33"
+            startOffset="15656"
+            endLine="278"
+            endColumn="53"
+            endOffset="15676"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="278"
+            column="54"
+            startOffset="15677"
+            endLine="278"
+            endColumn="77"
+            endOffset="15700"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="289"
+            column="70"
+            startOffset="16534"
+            endLine="289"
+            endColumn="87"
+            endOffset="16551"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;570nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="292"
+            column="33"
+            startOffset="16824"
+            endLine="292"
+            endColumn="53"
+            endOffset="16844"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="292"
+            column="54"
+            startOffset="16845"
+            endLine="292"
+            endColumn="77"
+            endOffset="16868"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="303"
+            column="70"
+            startOffset="17702"
+            endLine="303"
+            endColumn="87"
+            endOffset="17719"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;600nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="306"
+            column="33"
+            startOffset="17992"
+            endLine="306"
+            endColumn="53"
+            endOffset="18012"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="306"
+            column="54"
+            startOffset="18013"
+            endLine="306"
+            endColumn="77"
+            endOffset="18036"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;--&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="317"
+            column="70"
+            startOffset="18870"
+            endLine="317"
+            endColumn="87"
+            endOffset="18887"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;650nm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="320"
+            column="33"
+            startOffset="19160"
+            endLine="320"
+            endColumn="53"
+            endOffset="19180"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="320"
+            column="54"
+            startOffset="19181"
+            endLine="320"
+            endColumn="77"
+            endOffset="19204"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Notas del operador&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="339"
+            column="21"
+            startOffset="19950"
+            endLine="339"
+            endColumn="54"
+            endOffset="19983"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Buscar por nombre o marca...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="45"
+            column="21"
+            startOffset="1993"
+            endLine="45"
+            endColumn="64"
+            endOffset="2036"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0 bebidas&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="67"
+            column="13"
+            startOffset="2864"
+            endLine="67"
+            endColumn="37"
+            endOffset="2888"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Base de datos vacía&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="97"
+            column="17"
+            startOffset="4019"
+            endLine="97"
+            endColumn="65"
+            endOffset="4067"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sin bebidas registradas&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="104"
+            column="17"
+            startOffset="4309"
+            endLine="104"
+            endColumn="55"
+            endOffset="4347"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Usa el botón + para registrar\ntu primera bebida de referencia&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="113"
+            column="17"
+            startOffset="4691"
+            endLine="113"
+            endColumn="94"
+            endOffset="4768"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nueva bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="128"
+            column="9"
+            startOffset="5270"
+            endLine="128"
+            endColumn="36"
+            endOffset="5297"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logo DrinkSafe&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="18"
+            column="9"
+            startOffset="689"
+            endLine="18"
+            endColumn="52"
+            endOffset="732"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Bienvenido&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="23"
+            column="9"
+            startOffset="853"
+            endLine="23"
+            endColumn="34"
+            endOffset="878"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Inicia sesión para continuar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="31"
+            column="9"
+            startOffset="1108"
+            endLine="31"
+            endColumn="52"
+            endOffset="1151"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Correo electrónico&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="40"
+            column="9"
+            startOffset="1492"
+            endLine="40"
+            endColumn="42"
+            endOffset="1525"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Contraseña&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="55"
+            column="9"
+            startOffset="2179"
+            endLine="55"
+            endColumn="34"
+            endOffset="2204"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Iniciar Sesión&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="71"
+            column="9"
+            startOffset="2815"
+            endLine="71"
+            endColumn="38"
+            endOffset="2844"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;¿No tienes cuenta? Regístrate aquí&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="79"
+            column="9"
+            startOffset="3152"
+            endLine="79"
+            endColumn="58"
+            endOffset="3201"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logo DrinkSafe&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="22"
+            column="13"
+            startOffset="820"
+            endLine="22"
+            endColumn="56"
+            endOffset="863"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Crear Cuenta&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="27"
+            column="13"
+            startOffset="1000"
+            endLine="27"
+            endColumn="40"
+            endOffset="1027"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Únete a DrinkSafe Manager&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="35"
+            column="13"
+            startOffset="1286"
+            endLine="35"
+            endColumn="53"
+            endOffset="1326"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre de usuario&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="44"
+            column="13"
+            startOffset="1699"
+            endLine="44"
+            endColumn="45"
+            endOffset="1731"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Correo electrónico&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="59"
+            column="13"
+            startOffset="2437"
+            endLine="59"
+            endColumn="46"
+            endOffset="2470"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Contraseña&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="74"
+            column="13"
+            startOffset="3176"
+            endLine="74"
+            endColumn="38"
+            endOffset="3201"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Registrarse&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="90"
+            column="13"
+            startOffset="3871"
+            endLine="90"
+            endColumn="39"
+            endOffset="3897"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;¿Ya tienes cuenta? Inicia sesión&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="98"
+            column="13"
+            startOffset="4230"
+            endLine="98"
+            endColumn="60"
+            endOffset="4277"/>
+    </incident>
+
+    <incident
+        id="UseCompoundDrawables"
+        severity="warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="53"
+            column="22"
+            startOffset="2253"
+            endLine="53"
+            endColumn="34"
+            endOffset="2265"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Información&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="64"
+            column="29"
+            startOffset="2798"
+            endLine="64"
+            endColumn="69"
+            endOffset="2838"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Completa el formulario y presiona &apos;Registrar bebida&apos;. El sistema leerá los sensores de la Raspberry Pi automáticamente.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="71"
+            column="29"
+            startOffset="3149"
+            endLine="71"
+            endColumn="163"
+            endOffset="3283"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre de la bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="84"
+            column="21"
+            startOffset="3959"
+            endLine="84"
+            endColumn="55"
+            endOffset="3993"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Marca o fabricante&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="103"
+            column="21"
+            startOffset="5007"
+            endLine="103"
+            endColumn="54"
+            endOffset="5040"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tipo de bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="120"
+            column="21"
+            startOffset="5891"
+            endLine="120"
+            endColumn="50"
+            endOffset="5920"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Vodka&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="138"
+            column="25"
+            startOffset="6804"
+            endLine="138"
+            endColumn="45"
+            endOffset="6824"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tequila blanco&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="147"
+            column="25"
+            startOffset="7290"
+            endLine="147"
+            endColumn="54"
+            endOffset="7319"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Otro&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="156"
+            column="25"
+            startOffset="7779"
+            endLine="156"
+            endColumn="44"
+            endOffset="7798"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Notas adicionales (opcional)&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="167"
+            column="21"
+            startOffset="8324"
+            endLine="167"
+            endColumn="64"
+            endOffset="8367"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Registrar bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="187"
+            column="21"
+            startOffset="9399"
+            endLine="187"
+            endColumn="52"
+            endOffset="9430"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sensor activo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="214"
+            column="21"
+            startOffset="10572"
+            endLine="214"
+            endColumn="63"
+            endOffset="10614"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Leyendo sensores...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="222"
+            column="21"
+            startOffset="10939"
+            endLine="222"
+            endColumn="55"
+            endOffset="10973"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;El sensor AS7262 está analizando la muestra&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="232"
+            column="21"
+            startOffset="11409"
+            endLine="232"
+            endColumn="79"
+            endOffset="11467"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;AS7262&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="260"
+            column="33"
+            startOffset="12949"
+            endLine="260"
+            endColumn="54"
+            endOffset="12970"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Espectral&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="263"
+            column="33"
+            startOffset="13245"
+            endLine="263"
+            endColumn="57"
+            endOffset="13269"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="263"
+            column="58"
+            startOffset="13270"
+            endLine="263"
+            endColumn="81"
+            endOffset="13293"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Conduct.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="281"
+            column="33"
+            startOffset="14363"
+            endLine="281"
+            endColumn="56"
+            endOffset="14386"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;µS/cm&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="284"
+            column="33"
+            startOffset="14656"
+            endLine="284"
+            endColumn="53"
+            endOffset="14676"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="284"
+            column="54"
+            startOffset="14677"
+            endLine="284"
+            endColumn="77"
+            endOffset="14700"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Temp.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="302"
+            column="33"
+            startOffset="15776"
+            endLine="302"
+            endColumn="53"
+            endOffset="15796"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;°C&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="305"
+            column="33"
+            startOffset="16071"
+            endLine="305"
+            endColumn="50"
+            endOffset="16088"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="305"
+            column="51"
+            startOffset="16089"
+            endLine="305"
+            endColumn="74"
+            endOffset="16112"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logo DrinkSafe&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="37"
+            column="9"
+            startOffset="1370"
+            endLine="37"
+            endColumn="52"
+            endOffset="1413"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;DrinkSafe&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="50"
+            column="9"
+            startOffset="1945"
+            endLine="50"
+            endColumn="33"
+            endOffset="1969"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Manager&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="66"
+            column="9"
+            startOffset="2572"
+            endLine="66"
+            endColumn="31"
+            endOffset="2594"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sistema detector de alcohol adulterado&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="81"
+            column="9"
+            startOffset="3164"
+            endLine="81"
+            endColumn="62"
+            endOffset="3217"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;v1.0.0 · Universidad&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="106"
+            column="9"
+            startOffset="4224"
+            endLine="106"
+            endColumn="44"
+            endOffset="4259"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tipo de bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="35"
+            column="17"
+            startOffset="1395"
+            endLine="35"
+            endColumn="60"
+            endOffset="1438"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="44"
+            column="13"
+            startOffset="1719"
+            endLine="44"
+            endColumn="34"
+            endOffset="1740"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Marca&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="58"
+            column="13"
+            startOffset="2301"
+            endLine="58"
+            endColumn="33"
+            endOffset="2321"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tipo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="84"
+            column="17"
+            startOffset="3537"
+            endLine="84"
+            endColumn="36"
+            endOffset="3556"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;0.0%&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="101"
+            column="21"
+            startOffset="4269"
+            endLine="101"
+            endColumn="40"
+            endOffset="4288"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;alcohol&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="108"
+            column="21"
+            startOffset="4606"
+            endLine="108"
+            endColumn="43"
+            endOffset="4628"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `9sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="109"
+            column="21"
+            startOffset="4650"
+            endLine="109"
+            endColumn="43"
+            endOffset="4672"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;20°C&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="123"
+            column="21"
+            startOffset="5241"
+            endLine="123"
+            endColumn="40"
+            endOffset="5260"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;temp.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="130"
+            column="21"
+            startOffset="5583"
+            endLine="130"
+            endColumn="41"
+            endOffset="5603"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `9sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="131"
+            column="21"
+            startOffset="5625"
+            endLine="131"
+            endColumn="43"
+            endOffset="5647"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;dd/mm/yyyy&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="142"
+            column="13"
+            startOffset="5981"
+            endLine="142"
+            endColumn="38"
+            endOffset="6006"/>
+    </incident>
+
+    <incident
+        id="SmallSp"
+        severity="warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="143"
+            column="13"
+            startOffset="6020"
+            endLine="143"
+            endColumn="36"
+            endOffset="6043"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Eliminar bebida&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_bebida.xml"
+            line="160"
+            column="13"
+            startOffset="6792"
+            endLine="160"
+            endColumn="57"
+            endOffset="6836"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="26"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="5"
+            endColumn="17"
+            endOffset="276"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive roundIcon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="5"
+            endColumn="17"
+            endOffset="276"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/dashboard/DashboardFragment.kt"
+            line="86"
+            column="43"
+            startOffset="3039"
+            endLine="86"
+            endColumn="71"
+            endOffset="3067"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/dashboard/DashboardFragment.kt"
+            line="86"
+            column="50"
+            startOffset="3046"
+            endLine="86"
+            endColumn="70"
+            endOffset="3066"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/dashboard/DashboardFragment.kt"
+            line="94"
+            column="50"
+            startOffset="3363"
+            endLine="94"
+            endColumn="73"
+            endOffset="3386"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/dashboard/DashboardFragment.kt"
+            line="98"
+            column="50"
+            startOffset="3582"
+            endLine="98"
+            endColumn="72"
+            endOffset="3604"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/dashboard/DashboardFragment.kt"
+            line="102"
+            column="50"
+            startOffset="3804"
+            endLine="102"
+            endColumn="74"
+            endOffset="3828"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/BebidaAdapter.kt"
+            line="63"
+            column="34"
+            startOffset="2286"
+            endLine="63"
+            endColumn="77"
+            endOffset="2329"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/BebidaAdapter.kt"
+            line="63"
+            column="38"
+            startOffset="2290"
+            endLine="63"
+            endColumn="42"
+            endOffset="2294"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/BebidaAdapter.kt"
+            line="64"
+            column="31"
+            startOffset="2360"
+            endLine="64"
+            endColumn="71"
+            endOffset="2400"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/BebidaAdapter.kt"
+            line="64"
+            column="35"
+            startOffset="2364"
+            endLine="64"
+            endColumn="39"
+            endOffset="2368"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/ListaBebidasFragment.kt"
+            line="97"
+            column="39"
+            startOffset="3367"
+            endLine="97"
+            endColumn="100"
+            endOffset="3428"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/database/ListaBebidasFragment.kt"
+            line="97"
+            column="55"
+            startOffset="3383"
+            endLine="97"
+            endColumn="62"
+            endOffset="3390"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="59"
+            column="40"
+            startOffset="2000"
+            endLine="59"
+            endColumn="79"
+            endOffset="2039"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="59"
+            column="41"
+            startOffset="2001"
+            endLine="59"
+            endColumn="55"
+            endOffset="2015"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="68"
+            column="39"
+            startOffset="2374"
+            endLine="68"
+            endColumn="82"
+            endOffset="2417"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="68"
+            column="43"
+            startOffset="2378"
+            endLine="68"
+            endColumn="47"
+            endOffset="2382"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="69"
+            column="45"
+            startOffset="2462"
+            endLine="69"
+            endColumn="91"
+            endOffset="2508"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="69"
+            column="49"
+            startOffset="2466"
+            endLine="69"
+            endColumn="53"
+            endOffset="2470"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="69"
+            column="84"
+            startOffset="2501"
+            endLine="69"
+            endColumn="90"
+            endOffset="2507"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="70"
+            column="43"
+            startOffset="2551"
+            endLine="70"
+            endColumn="84"
+            endOffset="2592"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/detail/DetalleBebidaFragment.kt"
+            line="70"
+            column="47"
+            startOffset="2555"
+            endLine="70"
+            endColumn="51"
+            endOffset="2559"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/register/RegistrarBebidaFragment.kt"
+            line="135"
+            column="38"
+            startOffset="4866"
+            endLine="135"
+            endColumn="54"
+            endOffset="4882"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/register/RegistrarBebidaFragment.kt"
+            line="141"
+            column="40"
+            startOffset="5086"
+            endLine="141"
+            endColumn="59"
+            endOffset="5105"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/register/RegistrarBebidaFragment.kt"
+            line="142"
+            column="45"
+            startOffset="5151"
+            endLine="142"
+            endColumn="88"
+            endOffset="5194"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/register/RegistrarBebidaFragment.kt"
+            line="149"
+            column="40"
+            startOffset="5413"
+            endLine="149"
+            endColumn="69"
+            endOffset="5442"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/drinksafe/manager/ui/register/RegistrarBebidaFragment.kt"
+            line="150"
+            column="45"
+            startOffset="5488"
+            endLine="150"
+            endColumn="84"
+            endOffset="5527"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="34"
+            replacement="36"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="16"
+            column="9"
+            startOffset="376"
+            endLine="16"
+            endColumn="21"
+            endOffset="388"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0">
+        <fix-replace
+            description="Change to 1.18.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.18.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="45"
+            column="20"
+            startOffset="1029"
+            endLine="45"
+            endColumn="51"
+            endOffset="1060"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="46"
+            column="20"
+            startOffset="1081"
+            endLine="46"
+            endColumn="56"
+            endOffset="1117"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.1 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.8.1"
+            replacement="1.13.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="47"
+            column="20"
+            startOffset="1138"
+            endLine="47"
+            endColumn="58"
+            endOffset="1176"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9">
+        <fix-replace
+            description="Change to 1.8.9"
+            family="Update versions"
+            oldString="1.6.2"
+            replacement="1.8.9"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="48"
+            column="20"
+            startOffset="1197"
+            endLine="48"
+            endColumn="58"
+            endOffset="1235"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.13.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="20"
+            startOffset="1284"
+            endLine="51"
+            endColumn="65"
+            endOffset="1329"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="54"
+            column="20"
+            startOffset="1377"
+            endLine="54"
+            endColumn="70"
+            endOffset="1427"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.5 is available: 2.9.8">
+        <fix-replace
+            description="Change to 2.9.8"
+            family="Update versions"
+            oldString="2.7.5"
+            replacement="2.9.8"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="57"
+            column="20"
+            startOffset="1479"
+            endLine="57"
+            endColumn="71"
+            endOffset="1530"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.7.5 is available: 2.9.8">
+        <fix-replace
+            description="Change to 2.9.8"
+            family="Update versions"
+            oldString="2.7.5"
+            replacement="2.9.8"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="58"
+            column="20"
+            startOffset="1551"
+            endLine="58"
+            endColumn="65"
+            endOffset="1596"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="61"
+            column="20"
+            startOffset="1641"
+            endLine="61"
+            endColumn="54"
+            endOffset="1675"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="62"
+            column="20"
+            startOffset="1696"
+            endLine="62"
+            endColumn="50"
+            endOffset="1726"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="63"
+            column="9"
+            startOffset="1736"
+            endLine="63"
+            endColumn="44"
+            endOffset="1771"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-bom than 32.7.2 is available: 34.13.0">
+        <fix-replace
+            description="Change to 34.13.0"
+            family="Update versions"
+            oldString="32.7.2"
+            replacement="34.13.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="66"
+            column="29"
+            startOffset="1820"
+            endLine="66"
+            endColumn="70"
+            endOffset="1861"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-play-services than 1.7.3 is available: 1.8.1">
+        <fix-replace
+            description="Change to 1.8.1"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.8.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="72"
+            column="20"
+            startOffset="2199"
+            endLine="72"
+            endColumn="82"
+            endOffset="2261"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.2 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.10.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="75"
+            column="20"
+            startOffset="2302"
+            endLine="75"
+            endColumn="70"
+            endOffset="2352"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.6.2 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.10.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="76"
+            column="20"
+            startOffset="2373"
+            endLine="76"
+            endColumn="69"
+            endOffset="2422"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.6.2 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.10.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="77"
+            column="20"
+            startOffset="2443"
+            endLine="77"
+            endColumn="68"
+            endOffset="2491"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.7.3 is available: 1.8.1">
+        <fix-replace
+            description="Change to 1.8.1"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.8.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="80"
+            column="20"
+            startOffset="2533"
+            endLine="80"
+            endColumn="76"
+            endOffset="2589"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.2"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="84"
+            column="20"
+            startOffset="2712"
+            endLine="84"
+            endColumn="62"
+            endOffset="2754"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-splashscreen than 1.0.1 is available: 1.2.0">
+        <fix-replace
+            description="Change to 1.2.0"
+            family="Update versions"
+            oldString="1.0.1"
+            replacement="1.2.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="86"
+            column="20"
+            startOffset="2830"
+            endLine="86"
+            endColumn="59"
+            endOffset="2869"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="90"
+            column="31"
+            startOffset="2964"
+            endLine="90"
+            endColumn="62"
+            endOffset="2995"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="91"
+            column="31"
+            startOffset="3027"
+            endLine="91"
+            endColumn="75"
+            endOffset="3071"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/fondo_claro` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_dashboard.xml"
+            line="7"
+            column="5"
+            startOffset="302"
+            endLine="7"
+            endColumn="44"
+            endOffset="341"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/fondo_claro` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_detalle_bebida.xml"
+            line="7"
+            column="5"
+            startOffset="302"
+            endLine="7"
+            endColumn="44"
+            endOffset="341"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/fondo_claro` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_lista_bebidas.xml"
+            line="7"
+            column="5"
+            startOffset="302"
+            endLine="7"
+            endColumn="44"
+            endOffset="341"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `?android:attr/windowBackground` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="9"
+            column="5"
+            startOffset="363"
+            endLine="9"
+            endColumn="56"
+            endOffset="414"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/fondo_claro` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_registrar_bebida.xml"
+            line="7"
+            column="5"
+            startOffset="302"
+            endLine="7"
+            endColumn="44"
+            endOffset="341"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/azul_oscuro` with a theme that also paints a background (inferred theme is `@style/Theme.DrinkSafe`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_splash.xml"
+            line="8"
+            column="5"
+            startOffset="352"
+            endLine="8"
+            endColumn="44"
+            endOffset="391"/>
+    </incident>
+
+</incidents>

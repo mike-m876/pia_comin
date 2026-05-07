@@ -28,20 +28,24 @@ import javax.annotation.processing.Generated;
 public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
   private volatile BebidaDao _bebidaDao;
 
+  private volatile PerfilDao _perfilDao;
+
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(5) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `bebidas` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT NOT NULL, `marca` TEXT NOT NULL, `tipo` TEXT NOT NULL, `fechaRegistro` TEXT NOT NULL, `datosEspectrales` TEXT NOT NULL, `conductividad` REAL NOT NULL, `temperatura` REAL NOT NULL, `alcoholEstimado` REAL NOT NULL, `notas` TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `bebidas` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userId` TEXT NOT NULL, `syncCode` TEXT NOT NULL, `nombre` TEXT NOT NULL, `marca` TEXT NOT NULL, `tipo` TEXT NOT NULL, `fechaRegistro` TEXT NOT NULL, `datosEspectrales` TEXT NOT NULL, `conductividad` REAL NOT NULL, `temperatura` REAL NOT NULL, `alcoholEstimado` REAL NOT NULL, `notas` TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `perfil` (`id` INTEGER NOT NULL, `nombreUsuario` TEXT NOT NULL, `syncCode` TEXT NOT NULL, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a7ddcead387e1da167bea45eac10a547')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ceb2c1fb236c2b48e41b60cef1b837e0')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `bebidas`");
+        db.execSQL("DROP TABLE IF EXISTS `perfil`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -85,8 +89,10 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsBebidas = new HashMap<String, TableInfo.Column>(10);
+        final HashMap<String, TableInfo.Column> _columnsBebidas = new HashMap<String, TableInfo.Column>(12);
         _columnsBebidas.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBebidas.put("userId", new TableInfo.Column("userId", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBebidas.put("syncCode", new TableInfo.Column("syncCode", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBebidas.put("nombre", new TableInfo.Column("nombre", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBebidas.put("marca", new TableInfo.Column("marca", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsBebidas.put("tipo", new TableInfo.Column("tipo", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -105,9 +111,22 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
                   + " Expected:\n" + _infoBebidas + "\n"
                   + " Found:\n" + _existingBebidas);
         }
+        final HashMap<String, TableInfo.Column> _columnsPerfil = new HashMap<String, TableInfo.Column>(3);
+        _columnsPerfil.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsPerfil.put("nombreUsuario", new TableInfo.Column("nombreUsuario", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsPerfil.put("syncCode", new TableInfo.Column("syncCode", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysPerfil = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesPerfil = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoPerfil = new TableInfo("perfil", _columnsPerfil, _foreignKeysPerfil, _indicesPerfil);
+        final TableInfo _existingPerfil = TableInfo.read(db, "perfil");
+        if (!_infoPerfil.equals(_existingPerfil)) {
+          return new RoomOpenHelper.ValidationResult(false, "perfil(com.drinksafe.manager.data.models.Perfil).\n"
+                  + " Expected:\n" + _infoPerfil + "\n"
+                  + " Found:\n" + _existingPerfil);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "a7ddcead387e1da167bea45eac10a547", "672d32cbfdd7fb6a271a365a900c9d20");
+    }, "ceb2c1fb236c2b48e41b60cef1b837e0", "bf9ab9ecaa1b6f01d0073e0d5280e384");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -118,7 +137,7 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "bebidas");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "bebidas","perfil");
   }
 
   @Override
@@ -128,6 +147,7 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `bebidas`");
+      _db.execSQL("DELETE FROM `perfil`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -143,6 +163,7 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(BebidaDao.class, BebidaDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(PerfilDao.class, PerfilDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -171,6 +192,20 @@ public final class DrinkSafeDatabase_Impl extends DrinkSafeDatabase {
           _bebidaDao = new BebidaDao_Impl(this);
         }
         return _bebidaDao;
+      }
+    }
+  }
+
+  @Override
+  public PerfilDao perfilDao() {
+    if (_perfilDao != null) {
+      return _perfilDao;
+    } else {
+      synchronized(this) {
+        if(_perfilDao == null) {
+          _perfilDao = new PerfilDao_Impl(this);
+        }
+        return _perfilDao;
       }
     }
   }

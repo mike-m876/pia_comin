@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_drinksafe_logo.xml - Logo principal del sistema -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Fondo circular glow -->
+    <path
+        android:pathData="M60,60m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0"
+        android:fillColor="#1A2196F3" />
+
+    <!-- Copa / vaso estilizado -->
+    <path
+        android:pathData="M42,25 L78,25 L70,65 L50,65 Z"
+        android:fillColor="#2196F3"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+
+    <!-- Pie de la copa -->
+    <path
+        android:pathData="M50,65 L50,80 L70,80 L70,65 Z"
+        android:fillColor="#1565C0" />
+
+    <!-- Base -->
+    <path
+        android:pathData="M40,80 L80,80 L80,85 L40,85 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Ondas espectrales dentro de la copa -->
+    <path
+        android:pathData="M48,35 Q55,32 62,35 Q69,38 74,35"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:strokeAlpha="200" />
+
+    <path
+        android:pathData="M47,45 Q54,42 61,45 Q68,48 73,45"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M46,55 Q53,52 60,55 Q67,58 72,55"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:strokeAlpha="150" />
+
+    <!-- Punto brillante -->
+    <path
+        android:pathData="M52,32m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="180" />
+
+</vector>

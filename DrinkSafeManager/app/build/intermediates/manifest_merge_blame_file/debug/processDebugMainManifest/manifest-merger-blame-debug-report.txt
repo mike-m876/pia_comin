@@ -1,0 +1,420 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.drinksafe.manager"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permisos de red para comunicación con Raspberry Pi -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:6:5-79
+13-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:7:5-76
+14-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:7:22-73
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:24:5-68
+15-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:24:22-65
+16    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+16-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:25:5-79
+16-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:25:22-76
+17    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+17-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:26:5-88
+17-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:26:22-85
+18    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+18-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:27:5-82
+18-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:27:22-79
+19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+19-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:26:5-110
+19-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:26:22-107
+20
+21    <permission
+21-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+22        android:name="com.drinksafe.manager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.drinksafe.manager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+26    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+26-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Leona\.gradle\caches\8.13\transforms\e85690e6fba854f6f3d30c4468379a9e\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+26-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Leona\.gradle\caches\8.13\transforms\e85690e6fba854f6f3d30c4468379a9e\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+27
+28    <application
+28-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:9:5-30:19
+29        android:name="com.drinksafe.manager.DrinkSafeApplication"
+29-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:16:9-45
+30        android:allowBackup="true"
+30-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:10:9-35
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.12.0] C:\Users\Leona\.gradle\caches\8.13\transforms\583478d97da6f954d44d68493ba1d187\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+32        android:debuggable="true"
+33        android:extractNativeLibs="false"
+34        android:icon="@mipmap/ic_launcher"
+34-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:11:9-43
+35        android:label="@string/app_name"
+35-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:12:9-41
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:13:9-54
+37        android:supportsRtl="true"
+37-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:14:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.DrinkSafe" >
+39-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:15:9-47
+40
+41        <!-- Actividad principal -->
+42        <activity
+42-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:19:9-28:20
+43            android:name="com.drinksafe.manager.ui.MainActivity"
+43-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:20:13-44
+44            android:exported="true"
+44-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:21:13-36
+45            android:screenOrientation="portrait"
+45-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:22:13-49
+46            android:windowSoftInputMode="adjustResize" >
+46-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:23:13-55
+47            <intent-filter>
+47-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:24:13-27:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:25:17-69
+48-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:25:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:26:17-77
+50-->C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:26:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <service
+54-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:8:9-14:19
+55            android:name="com.google.firebase.components.ComponentDiscoveryService"
+55-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:9:13-84
+56            android:directBootAware="true"
+56-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+57            android:exported="false" >
+57-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:10:13-37
+58            <meta-data
+58-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:11:13-13:85
+59                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+59-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:12:17-119
+60                android:value="com.google.firebase.components.ComponentRegistrar" />
+60-->[com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\735394cc1c487fa97f8a2334ebe4889e\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:13:17-82
+61            <meta-data
+61-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+62                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+62-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+63                android:value="com.google.firebase.components.ComponentRegistrar" />
+63-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+64            <meta-data
+64-->[com.google.firebase:firebase-analytics-ktx:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\9cc1be29721f65c37f17da7031291d9d\transformed\firebase-analytics-ktx-21.5.1\AndroidManifest.xml:11:13-13:85
+65                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsLegacyRegistrar"
+65-->[com.google.firebase:firebase-analytics-ktx:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\9cc1be29721f65c37f17da7031291d9d\transformed\firebase-analytics-ktx-21.5.1\AndroidManifest.xml:12:17-129
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.firebase:firebase-analytics-ktx:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\9cc1be29721f65c37f17da7031291d9d\transformed\firebase-analytics-ktx-21.5.1\AndroidManifest.xml:13:17-82
+67            <meta-data
+67-->[com.google.firebase:firebase-database-ktx:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\8bec69d4d8064cdbf2ac7163ed7a4840\transformed\firebase-database-ktx-20.3.0\AndroidManifest.xml:12:13-14:85
+68                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar"
+68-->[com.google.firebase:firebase-database-ktx:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\8bec69d4d8064cdbf2ac7163ed7a4840\transformed\firebase-database-ktx-20.3.0\AndroidManifest.xml:13:17-127
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.firebase:firebase-database-ktx:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\8bec69d4d8064cdbf2ac7163ed7a4840\transformed\firebase-database-ktx-20.3.0\AndroidManifest.xml:14:17-82
+70            <meta-data
+70-->[com.google.firebase:firebase-firestore-ktx:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\a46ccf3e14c0d7492b587af67caf2cff\transformed\firebase-firestore-ktx-24.10.2\AndroidManifest.xml:12:13-14:85
+71                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar"
+71-->[com.google.firebase:firebase-firestore-ktx:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\a46ccf3e14c0d7492b587af67caf2cff\transformed\firebase-firestore-ktx-24.10.2\AndroidManifest.xml:13:17-129
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.firebase:firebase-firestore-ktx:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\a46ccf3e14c0d7492b587af67caf2cff\transformed\firebase-firestore-ktx-24.10.2\AndroidManifest.xml:14:17-82
+73            <meta-data
+73-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
+74                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+74-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:30:17-120
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:31:17-82
+76            <meta-data
+76-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
+77                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+77-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:33:17-109
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[com.google.firebase:firebase-database:20.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\9054a15162173209557174172bb34da8\transformed\firebase-database-20.3.0\AndroidManifest.xml:34:17-82
+79            <meta-data
+79-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:17:13-19:85
+80                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+80-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:18:17-122
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:19:17-82
+82            <meta-data
+82-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:20:13-22:85
+83                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+83-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:21:17-111
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[com.google.firebase:firebase-firestore:24.10.2] C:\Users\Leona\.gradle\caches\8.13\transforms\eb1502ce739f44189b544192eeb54c47\transformed\firebase-firestore-24.10.2\AndroidManifest.xml:22:17-82
+85            <meta-data
+85-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:37:13-39:85
+86                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+86-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:38:17-139
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:39:17-82
+88            <meta-data
+88-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+89                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+89-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+91            <meta-data
+91-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+92                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+92-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\c48d392115cca37f696fe7cae7dbf532\transformed\firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+94            <meta-data
+94-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\dd68f3135e8fe253d8c1ccc9b2a88802\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+95                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+95-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\dd68f3135e8fe253d8c1ccc9b2a88802\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\dd68f3135e8fe253d8c1ccc9b2a88802\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+98                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+98-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+100        </service>
+101
+102        <activity
+102-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+103            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+103-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+104            android:excludeFromRecents="true"
+104-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+105            android:exported="true"
+105-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+106            android:launchMode="singleTask"
+106-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+107-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+108            <intent-filter>
+108-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+109                <action android:name="android.intent.action.VIEW" />
+109-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+109-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+110
+111                <category android:name="android.intent.category.DEFAULT" />
+111-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+111-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+112                <category android:name="android.intent.category.BROWSABLE" />
+112-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+112-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+113
+114                <data
+114-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+115                    android:host="firebase.auth"
+115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+116                    android:path="/"
+116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+117                    android:scheme="genericidp" />
+117-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+118            </intent-filter>
+119        </activity>
+120        <activity
+120-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+121            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+121-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+122            android:excludeFromRecents="true"
+122-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+123            android:exported="true"
+123-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+124            android:launchMode="singleTask"
+124-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+125-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+126            <intent-filter>
+126-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+127                <action android:name="android.intent.action.VIEW" />
+127-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+127-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+128
+129                <category android:name="android.intent.category.DEFAULT" />
+129-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+129-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+130                <category android:name="android.intent.category.BROWSABLE" />
+130-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+130-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+131
+132                <data
+132-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+133                    android:host="firebase.auth"
+133-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+134                    android:path="/"
+134-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+135                    android:scheme="recaptcha" />
+135-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Leona\.gradle\caches\8.13\transforms\b89612681909d27d0f42edbcceeac2db\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+136            </intent-filter>
+137        </activity>
+138
+139        <property
+139-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:30:9-32:61
+140            android:name="android.adservices.AD_SERVICES_CONFIG"
+140-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:31:13-65
+141            android:resource="@xml/ga_ad_services_config" />
+141-->[com.google.android.gms:play-services-measurement-api:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\948bf2989cc7f803421bf6e6bd49893b\transformed\play-services-measurement-api-21.5.1\AndroidManifest.xml:32:13-58
+142
+143        <provider
+143-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+144            android:name="com.google.firebase.provider.FirebaseInitProvider"
+144-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+145            android:authorities="com.drinksafe.manager.firebaseinitprovider"
+145-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+146            android:directBootAware="true"
+146-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+147            android:exported="false"
+147-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+148            android:initOrder="100" />
+148-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Leona\.gradle\caches\8.13\transforms\bbc77243c7dd17fe8b831061e21fefda\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+149
+150        <receiver
+150-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:29:9-33:20
+151            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+151-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:30:13-85
+152            android:enabled="true"
+152-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:31:13-35
+153            android:exported="false" >
+153-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:32:13-37
+154        </receiver>
+155
+156        <service
+156-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:35:9-38:40
+157            android:name="com.google.android.gms.measurement.AppMeasurementService"
+157-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:36:13-84
+158            android:enabled="true"
+158-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:37:13-35
+159            android:exported="false" />
+159-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:38:13-37
+160        <service
+160-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:39:9-43:72
+161            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+161-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:40:13-87
+162            android:enabled="true"
+162-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:41:13-35
+163            android:exported="false"
+163-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:42:13-37
+164            android:permission="android.permission.BIND_JOB_SERVICE" />
+164-->[com.google.android.gms:play-services-measurement:21.5.1] C:\Users\Leona\.gradle\caches\8.13\transforms\c707075267c30dadd9b399558358a75e\transformed\play-services-measurement-21.5.1\AndroidManifest.xml:43:13-69
+165        <service
+165-->[androidx.room:room-runtime:2.6.1] C:\Users\Leona\.gradle\caches\8.13\transforms\ca3e6f4c1d2a9864845d5b7cbd4934cb\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+166            android:name="androidx.room.MultiInstanceInvalidationService"
+166-->[androidx.room:room-runtime:2.6.1] C:\Users\Leona\.gradle\caches\8.13\transforms\ca3e6f4c1d2a9864845d5b7cbd4934cb\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+167            android:directBootAware="true"
+167-->[androidx.room:room-runtime:2.6.1] C:\Users\Leona\.gradle\caches\8.13\transforms\ca3e6f4c1d2a9864845d5b7cbd4934cb\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+168            android:exported="false" />
+168-->[androidx.room:room-runtime:2.6.1] C:\Users\Leona\.gradle\caches\8.13\transforms\ca3e6f4c1d2a9864845d5b7cbd4934cb\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+169
+170        <provider
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+171            android:name="androidx.startup.InitializationProvider"
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+172            android:authorities="com.drinksafe.manager.androidx-startup"
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+173            android:exported="false" >
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+174            <meta-data
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+175                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+176                android:value="androidx.startup" />
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leona\.gradle\caches\8.13\transforms\04fcc37e02e866a1fff2233f6a6d5d8d\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+177            <meta-data
+177-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leona\.gradle\caches\8.13\transforms\d49b7e6e8bd32908379170d572ab622b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+178                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+178-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leona\.gradle\caches\8.13\transforms\d49b7e6e8bd32908379170d572ab622b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+179                android:value="androidx.startup" />
+179-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leona\.gradle\caches\8.13\transforms\d49b7e6e8bd32908379170d572ab622b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+180            <meta-data
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+181                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+182                android:value="androidx.startup" />
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+183        </provider>
+184
+185        <activity
+185-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\5743a7bbbad906b2df501ee14c297107\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+186            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+186-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\5743a7bbbad906b2df501ee14c297107\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+187            android:exported="false"
+187-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\5743a7bbbad906b2df501ee14c297107\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+188            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+188-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\5743a7bbbad906b2df501ee14c297107\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+189
+190        <uses-library
+190-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+191            android:name="androidx.window.extensions"
+191-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+192            android:required="false" />
+192-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+193        <uses-library
+193-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+194            android:name="androidx.window.sidecar"
+194-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+195            android:required="false" />
+195-->[androidx.window:window:1.0.0] C:\Users\Leona\.gradle\caches\8.13\transforms\a32611914a2280f0330da9cb2d9766fc\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+196        <uses-library
+196-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\Leona\.gradle\caches\8.13\transforms\06b696fc5f60176fb4f64483884a346e\transformed\ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
+197            android:name="android.ext.adservices"
+197-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\Leona\.gradle\caches\8.13\transforms\06b696fc5f60176fb4f64483884a346e\transformed\ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
+198            android:required="false" />
+198-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\Leona\.gradle\caches\8.13\transforms\06b696fc5f60176fb4f64483884a346e\transformed\ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
+199
+200        <meta-data
+200-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\25f8f2cca2e0029ce6687443773fbe03\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+201            android:name="com.google.android.gms.version"
+201-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\25f8f2cca2e0029ce6687443773fbe03\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+202            android:value="@integer/google_play_services_version" />
+202-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Leona\.gradle\caches\8.13\transforms\25f8f2cca2e0029ce6687443773fbe03\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+203
+204        <receiver
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+205            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+206            android:directBootAware="false"
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+207            android:enabled="true"
+207-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+208            android:exported="true"
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+209            android:permission="android.permission.DUMP" >
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+210            <intent-filter>
+210-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+211                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+212            </intent-filter>
+213            <intent-filter>
+213-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+214                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+215            </intent-filter>
+216            <intent-filter>
+216-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+217                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+218            </intent-filter>
+219            <intent-filter>
+219-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+220                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Leona\.gradle\caches\8.13\transforms\58e13086bfc23a98fe33faa3dc2b82db\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+221            </intent-filter>
+222        </receiver>
+223    </application>
+224
+225</manifest>

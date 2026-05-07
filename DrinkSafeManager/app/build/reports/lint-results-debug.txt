@@ -1,0 +1,848 @@
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:16: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:45: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:46: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:47: Warning: A newer version of androidx.activity:activity-ktx than 1.8.1 is available: 1.13.0 [GradleDependency]
+    implementation 'androidx.activity:activity-ktx:1.8.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:48: Warning: A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9 [GradleDependency]
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:51: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.11.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:54: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:57: Warning: A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.5 is available: 2.9.8 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.5'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:58: Warning: A newer version of androidx.navigation:navigation-ui-ktx than 2.7.5 is available: 2.9.8 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.5'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:61: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation 'androidx.room:room-runtime:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:62: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4 [GradleDependency]
+    implementation 'androidx.room:room-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:63: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4 [GradleDependency]
+    ksp 'androidx.room:room-compiler:2.6.1'
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:66: Warning: A newer version of com.google.firebase:firebase-bom than 32.7.2 is available: 34.13.0 [GradleDependency]
+    implementation platform('com.google.firebase:firebase-bom:32.7.2')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:72: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-play-services than 1.7.3 is available: 1.8.1 [GradleDependency]
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:75: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:76: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:77: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.6.2 is available: 2.10.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:80: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.7.3 is available: 1.8.1 [GradleDependency]
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:84: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:86: Warning: A newer version of androidx.core:core-splashscreen than 1.0.1 is available: 1.2.0 [GradleDependency]
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:90: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\build.gradle:91: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\AndroidManifest.xml:22: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+            android:screenOrientation="portrait"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LockedOrientationActivity":
+   The <activity> element should not be locked to any orientation so that
+   users can take advantage of the multi-window environments and larger
+   screens available on Android. To fix the issue, consider declaring the
+   corresponding activity element with `screenOrientation="unspecified"or
+   "fullSensor"` attribute.
+
+   https://developer.android.com/topic/arc/window-management
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:53: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+                    <LinearLayout
+                     ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\drawable\ic_settings.xml:6: Warning: Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+        android:pathData="M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z"/>
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "VectorPath":
+   Using long vector paths is bad for performance. There are several ways to
+   make the pathData shorter:
+   * Using less precision
+   * Removing some minor details
+   * Using the Android Studio vector conversion tool
+   * Rasterizing the image (converting to PNG)
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:7: Warning: Possible overdraw: Root element paints background @color/fondo_claro with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="@color/fondo_claro">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:7: Warning: Possible overdraw: Root element paints background @color/fondo_claro with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="@color/fondo_claro">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:7: Warning: Possible overdraw: Root element paints background @color/fondo_claro with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="@color/fondo_claro">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:9: Warning: Possible overdraw: Root element paints background ?android:attr/windowBackground with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="?android:attr/windowBackground">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:7: Warning: Possible overdraw: Root element paints background @color/fondo_claro with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="@color/fondo_claro">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:8: Warning: Possible overdraw: Root element paints background @color/azul_oscuro with a theme that also paints a background (inferred theme is @style/Theme.DrinkSafe) [Overdraw]
+    android:background="@color/azul_oscuro">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:9: Warning: The resource R.color.azul_marino appears to be unused [UnusedResources]
+    <color name="azul_marino">#1B2A4A</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:15: Warning: The resource R.color.azul_tecnologico_oscuro appears to be unused [UnusedResources]
+    <color name="azul_tecnologico_oscuro">#1565C0</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:47: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:48: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:49: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:50: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:51: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:52: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\colors.xml:53: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:4: Warning: The resource R.string.app_version appears to be unused [UnusedResources]
+    <string name="app_version">v1.0.0</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:5: Warning: The resource R.string.sistema_nombre appears to be unused [UnusedResources]
+    <string name="sistema_nombre">DrinkSafe – Sistema detector de alcohol adulterado</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.dashboard_titulo appears to be unused [UnusedResources]
+    <string name="dashboard_titulo">DrinkSafe Manager</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:9: Warning: The resource R.string.dashboard_subtitulo appears to be unused [UnusedResources]
+    <string name="dashboard_subtitulo">Panel de administración</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:10: Warning: The resource R.string.card_registrar_titulo appears to be unused [UnusedResources]
+    <string name="card_registrar_titulo">Registrar nueva bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.card_registrar_desc appears to be unused [UnusedResources]
+    <string name="card_registrar_desc">Captura datos de referencia desde sensores</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.card_base_datos_titulo appears to be unused [UnusedResources]
+    <string name="card_base_datos_titulo">Base de datos de bebidas</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.card_base_datos_desc appears to be unused [UnusedResources]
+    <string name="card_base_datos_desc">Consulta y gestiona las referencias</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.card_config_titulo appears to be unused [UnusedResources]
+    <string name="card_config_titulo">Configuración del sistema</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.card_config_desc appears to be unused [UnusedResources]
+    <string name="card_config_desc">IP, sensores y parámetros del dispositivo</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.estado_conectado appears to be unused [UnusedResources]
+    <string name="estado_conectado">Raspberry Pi conectada</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:19: Warning: The resource R.string.estado_desconectado appears to be unused [UnusedResources]
+    <string name="estado_desconectado">Dispositivo desconectado</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.estado_verificando appears to be unused [UnusedResources]
+    <string name="estado_verificando">Verificando conexión…</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.registrar_titulo appears to be unused [UnusedResources]
+    <string name="registrar_titulo">Registrar bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:24: Warning: The resource R.string.campo_nombre appears to be unused [UnusedResources]
+    <string name="campo_nombre">Nombre de la bebida</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.campo_marca appears to be unused [UnusedResources]
+    <string name="campo_marca">Marca o fabricante</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.campo_notas appears to be unused [UnusedResources]
+    <string name="campo_notas">Notas adicionales (opcional)</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.btn_registrar appears to be unused [UnusedResources]
+    <string name="btn_registrar">Registrar bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.sensor_leyendo appears to be unused [UnusedResources]
+    <string name="sensor_leyendo">Leyendo sensores…</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.sensor_guardando appears to be unused [UnusedResources]
+    <string name="sensor_guardando">Guardando en base de datos…</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:30: Warning: The resource R.string.registro_exitoso appears to be unused [UnusedResources]
+    <string name="registro_exitoso">✓ Bebida registrada correctamente</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.tipo_vodka appears to be unused [UnusedResources]
+    <string name="tipo_vodka">Vodka</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.tipo_tequila appears to be unused [UnusedResources]
+    <string name="tipo_tequila">Tequila blanco</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.tipo_otro appears to be unused [UnusedResources]
+    <string name="tipo_otro">Otro</string>
+            ~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.lista_titulo appears to be unused [UnusedResources]
+    <string name="lista_titulo">Base de datos</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.buscar_hint appears to be unused [UnusedResources]
+    <string name="buscar_hint">Buscar por nombre o marca…</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.lista_vacia_titulo appears to be unused [UnusedResources]
+    <string name="lista_vacia_titulo">Sin bebidas registradas</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:41: Warning: The resource R.string.lista_vacia_desc appears to be unused [UnusedResources]
+    <string name="lista_vacia_desc">Usa el botón + para registrar tu primera bebida de referencia</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.detalle_titulo appears to be unused [UnusedResources]
+    <string name="detalle_titulo">Detalle de bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.datos_espectrales appears to be unused [UnusedResources]
+    <string name="datos_espectrales">Datos espectrales AS7262</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:48: Warning: The resource R.string.error_nombre_requerido appears to be unused [UnusedResources]
+    <string name="error_nombre_requerido">Ingresa el nombre de la bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:49: Warning: The resource R.string.error_marca_requerida appears to be unused [UnusedResources]
+    <string name="error_marca_requerida">Ingresa la marca</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.error_tipo_requerido appears to be unused [UnusedResources]
+    <string name="error_tipo_requerido">Selecciona el tipo de bebida</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\values\themes.xml:49: Warning: The resource R.style.Theme_DrinkSafe_Splash appears to be unused [UnusedResources]
+    <style name="Theme.DrinkSafe.Splash" parent="Theme.DrinkSafe">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:250: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="450nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:264: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="500nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:278: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="550nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:292: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="570nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:306: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="600nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:320: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="650nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:263: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="Espectral" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:284: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="µS/cm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:305: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                                android:text="°C" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                                  ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:109: Warning: Avoid using sizes smaller than 11sp: 9sp [SmallSp]
+                    android:textSize="9sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:131: Warning: Avoid using sizes smaller than 11sp: 9sp [SmallSp]
+                    android:textSize="9sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:143: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+            android:textSize="10sp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:90: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\BebidaAdapter.kt:63: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvAlcohol.text = "${"%.1f".format(bebida.alcoholEstimado)}%"
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\BebidaAdapter.kt:63: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvAlcohol.text = "${"%.1f".format(bebida.alcoholEstimado)}%"
+                                     ~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\BebidaAdapter.kt:64: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvTemp.text = "${"%.1f".format(bebida.temperatura)}°C"
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\BebidaAdapter.kt:64: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvTemp.text = "${"%.1f".format(bebida.temperatura)}°C"
+                                  ~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\dashboard\DashboardFragment.kt:86: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            binding.tvTotalBebidas.text = "$total bebidas registradas"
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\dashboard\DashboardFragment.kt:86: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.tvTotalBebidas.text = "$total bebidas registradas"
+                                                 ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\dashboard\DashboardFragment.kt:94: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                binding.tvEstadoConexion.text = "Verificando conexión..."
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\dashboard\DashboardFragment.kt:98: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                binding.tvEstadoConexion.text = "Raspberry Pi conectada"
+                                                 ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\dashboard\DashboardFragment.kt:102: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                binding.tvEstadoConexion.text = "Dispositivo desconectado"
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:59: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvFechaRegistro.text = "Registrada el ${bebida.fechaRegistro}"
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:59: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvFechaRegistro.text = "Registrada el ${bebida.fechaRegistro}"
+                                        ~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:68: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvAlcoholValor.text = "${"%.2f".format(bebida.alcoholEstimado)}%"
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:68: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvAlcoholValor.text = "${"%.2f".format(bebida.alcoholEstimado)}%"
+                                          ~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:69: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvConductividadValor.text = "${"%.1f".format(bebida.conductividad)} µS/cm"
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:69: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvConductividadValor.text = "${"%.1f".format(bebida.conductividad)} µS/cm"
+                                                ~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:69: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvConductividadValor.text = "${"%.1f".format(bebida.conductividad)} µS/cm"
+                                                                                   ~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:70: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                tvTemperaturaValor.text = "${"%.1f".format(bebida.temperatura)} °C"
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\detail\DetalleBebidaFragment.kt:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvTemperaturaValor.text = "${"%.1f".format(bebida.temperatura)} °C"
+                                              ~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\ListaBebidasFragment.kt:97: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            binding.tvContador.text = "${bebidas.size} bebida${if (bebidas.size != 1) "s" else ""}"
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\database\ListaBebidasFragment.kt:97: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.tvContador.text = "${bebidas.size} bebida${if (bebidas.size != 1) "s" else ""}"
+                                                      ~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\register\RegistrarBebidaFragment.kt:135: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.btnRegistrar.text = "Registrar bebida"
+                                     ~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\register\RegistrarBebidaFragment.kt:141: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvEstadoSensor.text = "Leyendo sensores..."
+                                       ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\register\RegistrarBebidaFragment.kt:142: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvDescripcionSensor.text = "El sensor AS7262 está analizando la muestra"
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\register\RegistrarBebidaFragment.kt:149: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvEstadoSensor.text = "Guardando en base de datos..."
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\java\com\drinksafe\manager\ui\register\RegistrarBebidaFragment.kt:150: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.tvDescripcionSensor.text = "Sincronizando datos con la Raspberry Pi"
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:30: Warning: Hardcoded string "DrinkSafe Manager", should use @string resource [HardcodedText]
+                    android:text="DrinkSafe Manager"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:38: Warning: Hardcoded string "Panel de administración", should use @string resource [HardcodedText]
+                    android:text="Panel de administración"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:62: Warning: Hardcoded string "Perfil de Usuario", should use @string resource [HardcodedText]
+                android:text="Perfil de Usuario"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:107: Warning: Hardcoded string "Usuario DrinkSafe", should use @string resource [HardcodedText]
+                                android:text="Usuario DrinkSafe"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:116: Warning: Hardcoded string "ID Sync: ----", should use @string resource [HardcodedText]
+                                android:text="ID Sync: ----"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:127: Warning: Hardcoded string "Generar ID", should use @string resource [HardcodedText]
+                            android:text="Generar ID" />
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:133: Warning: Hardcoded string "Usa este ID en tu Raspberry Pi para sincronizar el acceso.", should use @string resource [HardcodedText]
+                        android:text="Usa este ID en tu Raspberry Pi para sincronizar el acceso."
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:144: Warning: Hardcoded string "Estado del sistema", should use @string resource [HardcodedText]
+                android:text="Estado del sistema"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:175: Warning: Hardcoded string "Estado de conexión", should use @string resource [HardcodedText]
+                        android:contentDescription="Estado de conexión" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:187: Warning: Hardcoded string "Raspberry Pi 4", should use @string resource [HardcodedText]
+                            android:text="Raspberry Pi 4"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:196: Warning: Hardcoded string "Verificando...", should use @string resource [HardcodedText]
+                            android:text="Verificando..."
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:205: Warning: Hardcoded string "0 bebidas registradas", should use @string resource [HardcodedText]
+                            android:text="0 bebidas registradas"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:217: Warning: Hardcoded string "Actualizar conexión", should use @string resource [HardcodedText]
+                        android:contentDescription="Actualizar conexión"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:227: Warning: Hardcoded string "Acciones rápidas", should use @string resource [HardcodedText]
+                android:text="Acciones rápidas"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:262: Warning: Hardcoded string "Agregar bebida", should use @string resource [HardcodedText]
+                            android:contentDescription="Agregar bebida"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:276: Warning: Hardcoded string "Registrar nueva bebida", should use @string resource [HardcodedText]
+                            android:text="Registrar nueva bebida"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:284: Warning: Hardcoded string "Captura datos de referencia desde sensores", should use @string resource [HardcodedText]
+                            android:text="Captura datos de referencia desde sensores"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:294: Warning: Hardcoded string "Ir", should use @string resource [HardcodedText]
+                        android:contentDescription="Ir"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:328: Warning: Hardcoded string "Base de datos", should use @string resource [HardcodedText]
+                            android:contentDescription="Base de datos"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:342: Warning: Hardcoded string "Base de datos de bebidas", should use @string resource [HardcodedText]
+                            android:text="Base de datos de bebidas"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:350: Warning: Hardcoded string "Consulta y gestiona las referencias", should use @string resource [HardcodedText]
+                            android:text="Consulta y gestiona las referencias"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:360: Warning: Hardcoded string "Ir", should use @string resource [HardcodedText]
+                        android:contentDescription="Ir"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:395: Warning: Hardcoded string "Configuración", should use @string resource [HardcodedText]
+                            android:contentDescription="Configuración"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:409: Warning: Hardcoded string "Configuración del sistema", should use @string resource [HardcodedText]
+                            android:text="Configuración del sistema"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:417: Warning: Hardcoded string "IP, sensores y parámetros del dispositivo", should use @string resource [HardcodedText]
+                            android:text="IP, sensores y parámetros del dispositivo"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:427: Warning: Hardcoded string "Ir", should use @string resource [HardcodedText]
+                        android:contentDescription="Ir"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_dashboard.xml:437: Warning: Hardcoded string "DrinkSafe · Sistema de detección de alcohol adulterado", should use @string resource [HardcodedText]
+                android:text="DrinkSafe · Sistema de detección de alcohol adulterado"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:58: Warning: Hardcoded string "Ícono de bebida", should use @string resource [HardcodedText]
+                        android:contentDescription="Ícono de bebida"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:65: Warning: Hardcoded string "Nombre", should use @string resource [HardcodedText]
+                        android:text="Nombre"
+                        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:75: Warning: Hardcoded string "Marca", should use @string resource [HardcodedText]
+                        android:text="Marca"
+                        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:84: Warning: Hardcoded string "Tipo", should use @string resource [HardcodedText]
+                        android:text="Tipo"
+                        ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:93: Warning: Hardcoded string "Registrada el --/--/----", should use @string resource [HardcodedText]
+                        android:text="Registrada el --/--/----"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:105: Warning: Hardcoded string "Resultados del análisis", should use @string resource [HardcodedText]
+                android:text="Resultados del análisis"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:136: Warning: Hardcoded string "Alcohol", should use @string resource [HardcodedText]
+                            android:contentDescription="Alcohol" android:layout_marginBottom="8dp" />
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:139: Warning: Hardcoded string "0.0%", should use @string resource [HardcodedText]
+                            android:text="0.0%" android:textSize="22sp" android:textStyle="bold"
+                            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:142: Warning: Hardcoded string "Alcohol estimado", should use @string resource [HardcodedText]
+                            android:text="Alcohol estimado" android:textSize="11sp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:165: Warning: Hardcoded string "Conductividad", should use @string resource [HardcodedText]
+                            android:contentDescription="Conductividad" android:layout_marginBottom="8dp" />
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:168: Warning: Hardcoded string "0 µS/cm", should use @string resource [HardcodedText]
+                            android:text="0 µS/cm" android:textSize="18sp" android:textStyle="bold"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:171: Warning: Hardcoded string "Conductividad", should use @string resource [HardcodedText]
+                            android:text="Conductividad" android:textSize="11sp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:195: Warning: Hardcoded string "Temperatura", should use @string resource [HardcodedText]
+                        android:contentDescription="Temperatura" android:layout_marginEnd="16dp" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:197: Warning: Hardcoded string "Temperatura de la muestra", should use @string resource [HardcodedText]
+                        android:layout_weight="1" android:text="Temperatura de la muestra"
+                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:201: Warning: Hardcoded string "0.0 °C", should use @string resource [HardcodedText]
+                        android:text="0.0 °C" android:textSize="18sp" android:textStyle="bold"
+                        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:217: Warning: Hardcoded string "Datos espectrales AS7262", should use @string resource [HardcodedText]
+                    android:text="Datos espectrales AS7262"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:247: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:250: Warning: Hardcoded string "450nm", should use @string resource [HardcodedText]
+                                android:text="450nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:261: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:264: Warning: Hardcoded string "500nm", should use @string resource [HardcodedText]
+                                android:text="500nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:275: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:278: Warning: Hardcoded string "550nm", should use @string resource [HardcodedText]
+                                android:text="550nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:289: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:292: Warning: Hardcoded string "570nm", should use @string resource [HardcodedText]
+                                android:text="570nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:303: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:306: Warning: Hardcoded string "600nm", should use @string resource [HardcodedText]
+                                android:text="600nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:317: Warning: Hardcoded string "--", should use @string resource [HardcodedText]
+                                android:layout_height="wrap_content" android:text="--" android:textSize="13sp"
+                                                                     ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:320: Warning: Hardcoded string "650nm", should use @string resource [HardcodedText]
+                                android:text="650nm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_detalle_bebida.xml:339: Warning: Hardcoded string "Notas del operador", should use @string resource [HardcodedText]
+                    android:text="Notas del operador"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:45: Warning: Hardcoded string "Buscar por nombre o marca...", should use @string resource [HardcodedText]
+                    android:hint="Buscar por nombre o marca..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:67: Warning: Hardcoded string "0 bebidas", should use @string resource [HardcodedText]
+            android:text="0 bebidas"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:97: Warning: Hardcoded string "Base de datos vacía", should use @string resource [HardcodedText]
+                android:contentDescription="Base de datos vacía"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:104: Warning: Hardcoded string "Sin bebidas registradas", should use @string resource [HardcodedText]
+                android:text="Sin bebidas registradas"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:113: Warning: Hardcoded string "Usa el botón + para registrarntu primera bebida de referencia", should use @string resource [HardcodedText]
+                android:text="Usa el botón + para registrar\ntu primera bebida de referencia"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_lista_bebidas.xml:128: Warning: Hardcoded string "Nueva bebida", should use @string resource [HardcodedText]
+        android:text="Nueva bebida"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:18: Warning: Hardcoded string "Logo DrinkSafe", should use @string resource [HardcodedText]
+        android:contentDescription="Logo DrinkSafe" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:23: Warning: Hardcoded string "Bienvenido", should use @string resource [HardcodedText]
+        android:text="Bienvenido"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:31: Warning: Hardcoded string "Inicia sesión para continuar", should use @string resource [HardcodedText]
+        android:text="Inicia sesión para continuar"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:40: Warning: Hardcoded string "Correo electrónico", should use @string resource [HardcodedText]
+        android:hint="Correo electrónico"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:55: Warning: Hardcoded string "Contraseña", should use @string resource [HardcodedText]
+        android:hint="Contraseña"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:71: Warning: Hardcoded string "Iniciar Sesión", should use @string resource [HardcodedText]
+        android:text="Iniciar Sesión"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_login.xml:79: Warning: Hardcoded string "¿No tienes cuenta? Regístrate aquí", should use @string resource [HardcodedText]
+        android:text="¿No tienes cuenta? Regístrate aquí" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:22: Warning: Hardcoded string "Logo DrinkSafe", should use @string resource [HardcodedText]
+            android:contentDescription="Logo DrinkSafe" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:27: Warning: Hardcoded string "Crear Cuenta", should use @string resource [HardcodedText]
+            android:text="Crear Cuenta"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:35: Warning: Hardcoded string "Únete a DrinkSafe Manager", should use @string resource [HardcodedText]
+            android:text="Únete a DrinkSafe Manager"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:44: Warning: Hardcoded string "Nombre de usuario", should use @string resource [HardcodedText]
+            android:hint="Nombre de usuario"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:59: Warning: Hardcoded string "Correo electrónico", should use @string resource [HardcodedText]
+            android:hint="Correo electrónico"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:74: Warning: Hardcoded string "Contraseña", should use @string resource [HardcodedText]
+            android:hint="Contraseña"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:90: Warning: Hardcoded string "Registrarse", should use @string resource [HardcodedText]
+            android:text="Registrarse"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_register.xml:98: Warning: Hardcoded string "¿Ya tienes cuenta? Inicia sesión", should use @string resource [HardcodedText]
+            android:text="¿Ya tienes cuenta? Inicia sesión" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:64: Warning: Hardcoded string "Información", should use @string resource [HardcodedText]
+                            android:contentDescription="Información"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:71: Warning: Hardcoded string "Completa el formulario y presiona 'Registrar bebida'. El sistema leerá los sensores de la Raspberry Pi automáticamente.", should use @string resource [HardcodedText]
+                            android:text="Completa el formulario y presiona 'Registrar bebida'. El sistema leerá los sensores de la Raspberry Pi automáticamente."
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:84: Warning: Hardcoded string "Nombre de la bebida", should use @string resource [HardcodedText]
+                    android:hint="Nombre de la bebida"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:103: Warning: Hardcoded string "Marca o fabricante", should use @string resource [HardcodedText]
+                    android:hint="Marca o fabricante"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:120: Warning: Hardcoded string "Tipo de bebida", should use @string resource [HardcodedText]
+                    android:text="Tipo de bebida"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:138: Warning: Hardcoded string "Vodka", should use @string resource [HardcodedText]
+                        android:text="Vodka"
+                        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:147: Warning: Hardcoded string "Tequila blanco", should use @string resource [HardcodedText]
+                        android:text="Tequila blanco"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:156: Warning: Hardcoded string "Otro", should use @string resource [HardcodedText]
+                        android:text="Otro"
+                        ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:167: Warning: Hardcoded string "Notas adicionales (opcional)", should use @string resource [HardcodedText]
+                    android:hint="Notas adicionales (opcional)"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:187: Warning: Hardcoded string "Registrar bebida", should use @string resource [HardcodedText]
+                    android:text="Registrar bebida"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:214: Warning: Hardcoded string "Sensor activo", should use @string resource [HardcodedText]
+                    android:contentDescription="Sensor activo"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:222: Warning: Hardcoded string "Leyendo sensores...", should use @string resource [HardcodedText]
+                    android:text="Leyendo sensores..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:232: Warning: Hardcoded string "El sensor AS7262 está analizando la muestra", should use @string resource [HardcodedText]
+                    android:text="El sensor AS7262 está analizando la muestra"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:260: Warning: Hardcoded string "AS7262", should use @string resource [HardcodedText]
+                                android:text="AS7262" android:textSize="11sp" android:textColor="@color/azul_tecnologico"
+                                ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:263: Warning: Hardcoded string "Espectral", should use @string resource [HardcodedText]
+                                android:text="Espectral" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:281: Warning: Hardcoded string "Conduct.", should use @string resource [HardcodedText]
+                                android:text="Conduct." android:textSize="11sp" android:textColor="@color/verde_exito"
+                                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:284: Warning: Hardcoded string "µS/cm", should use @string resource [HardcodedText]
+                                android:text="µS/cm" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:302: Warning: Hardcoded string "Temp.", should use @string resource [HardcodedText]
+                                android:text="Temp." android:textSize="11sp" android:textColor="@color/azul_tecnologico"
+                                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_registrar_bebida.xml:305: Warning: Hardcoded string "°C", should use @string resource [HardcodedText]
+                                android:text="°C" android:textSize="10sp" android:textColor="@color/texto_secundario" />
+                                ~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:37: Warning: Hardcoded string "Logo DrinkSafe", should use @string resource [HardcodedText]
+        android:contentDescription="Logo DrinkSafe"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:50: Warning: Hardcoded string "DrinkSafe", should use @string resource [HardcodedText]
+        android:text="DrinkSafe"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:66: Warning: Hardcoded string "Manager", should use @string resource [HardcodedText]
+        android:text="Manager"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:81: Warning: Hardcoded string "Sistema detector de alcohol adulterado", should use @string resource [HardcodedText]
+        android:text="Sistema detector de alcohol adulterado"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\fragment_splash.xml:106: Warning: Hardcoded string "v1.0.0 · Universidad", should use @string resource [HardcodedText]
+        android:text="v1.0.0 · Universidad"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:35: Warning: Hardcoded string "Tipo de bebida", should use @string resource [HardcodedText]
+                android:contentDescription="Tipo de bebida"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:44: Warning: Hardcoded string "Nombre", should use @string resource [HardcodedText]
+            android:text="Nombre"
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:58: Warning: Hardcoded string "Marca", should use @string resource [HardcodedText]
+            android:text="Marca"
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:84: Warning: Hardcoded string "Tipo", should use @string resource [HardcodedText]
+                android:text="Tipo"
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:101: Warning: Hardcoded string "0.0%", should use @string resource [HardcodedText]
+                    android:text="0.0%"
+                    ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:108: Warning: Hardcoded string "alcohol", should use @string resource [HardcodedText]
+                    android:text="alcohol"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:123: Warning: Hardcoded string "20°C", should use @string resource [HardcodedText]
+                    android:text="20°C"
+                    ~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:130: Warning: Hardcoded string "temp.", should use @string resource [HardcodedText]
+                    android:text="temp."
+                    ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:142: Warning: Hardcoded string "dd/mm/yyyy", should use @string resource [HardcodedText]
+            android:text="dd/mm/yyyy"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Leona\OneDrive\Desktop\pia_comin\DrinkSafeManager\app\src\main\res\layout\item_bebida.xml:160: Warning: Hardcoded string "Eliminar bebida", should use @string resource [HardcodedText]
+            android:contentDescription="Eliminar bebida"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 226 warnings

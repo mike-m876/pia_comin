@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AlphaAnimation
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -14,21 +13,23 @@ import com.drinksafe.manager.R
 import com.drinksafe.manager.databinding.FragmentDashboardBinding
 import com.drinksafe.manager.viewmodel.BebidaViewModel
 import com.drinksafe.manager.viewmodel.ConexionState
+import com.drinksafe.manager.viewmodel.PerfilViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-/**
- * Dashboard principal de DrinkSafe Manager.
- * Muestra tarjetas de acceso rápido y el estado de conexión con la Raspberry Pi.
- */
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: BebidaViewModel by activityViewModels {
-        val repo = (requireActivity().application as DrinkSafeApplication).bebidaRepository
-        BebidaViewModel.Factory(repo)
+    private val bebidaViewModel: BebidaViewModel by activityViewModels {
+        val app = (requireActivity().application as DrinkSafeApplication)
+        BebidaViewModel.Factory(app.bebidaRepository, app.perfilRepository)
+    }
+
+    private val perfilViewModel: PerfilViewModel by activityViewModels {
+        val repo = (requireActivity().application as DrinkSafeApplication).perfilRepository
+        PerfilViewModel.Factory(repo)
     }
 
     override fun onCreateView(
@@ -43,103 +44,81 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         configurarUI()
         observarDatos()
-        animarTarjetas()
     }
 
     private fun configurarUI() {
-        // Tarjeta: Registrar nueva bebida
+        binding.btnGenerarId.setOnClickListener {
+            perfilViewModel.generarYNuevoCodigoSync()
+        }
+
         binding.cardRegistrar.setOnClickListener {
             findNavController().navigate(R.id.action_dashboard_to_registrar)
         }
 
-        // Tarjeta: Ver base de datos
         binding.cardBaseDatos.setOnClickListener {
             findNavController().navigate(R.id.action_dashboard_to_listaBebidas)
         }
 
-        // Tarjeta: Configuración (muestra mensaje informativo)
-        binding.cardConfiguracion.setOnClickListener {
-            mostrarDialogoConfiguracion()
+        binding.btnRefreshConexion.setOnClickListener {
+            bebidaViewModel.verificarConexionRaspberry()
         }
 
-        // Botón refresh de conexión
-        binding.btnRefreshConexion.setOnClickListener {
-            viewModel.verificarConexionRaspberry()
+        binding.cardConfiguracion.setOnClickListener {
+            mostrarDialogoCerrarSesion()
         }
     }
 
     private fun observarDatos() {
-        // Observar estado de conexión
+        perfilViewModel.perfil.observe(viewLifecycleOwner) { perfil ->
+            perfil?.let {
+                binding.tvNombreUsuario.text = it.nombreUsuario
+                binding.tvIdSync.text = if (it.syncCode.isEmpty()) "ID Sync: ----" else "ID Sync: ${it.syncCode}"
+            }
+        }
+
         lifecycleScope.launch {
-            viewModel.conexionState.collectLatest { estado ->
+            bebidaViewModel.conexionState.collectLatest { estado ->
                 actualizarEstadoConexion(estado)
             }
         }
 
-        // Observar total de bebidas
-        viewModel.totalBebidas.observe(viewLifecycleOwner) { total ->
+        bebidaViewModel.totalBebidas.observe(viewLifecycleOwner) { total ->
             binding.tvTotalBebidas.text = "$total bebidas registradas"
         }
     }
 
-    /** Actualiza el indicador visual de conexión con la Raspberry Pi */
     private fun actualizarEstadoConexion(estado: ConexionState) {
         when (estado) {
             is ConexionState.Verificando -> {
                 binding.ivEstadoConexion.setImageResource(R.drawable.ic_connection_checking)
-                binding.tvEstadoConexion.text = "Verificando conexión..."
-                binding.tvEstadoConexion.setTextColor(
-                    requireContext().getColor(R.color.azul_tecnologico)
-                )
-                binding.cardEstadoConexion.strokeColor =
-                    requireContext().getColor(R.color.azul_tecnologico)
+                binding.tvDispositivoNombre.text = "Raspberry Pi 4"
+                binding.tvEstadoConexion.text = "Verificando..."
+                binding.tvEstadoConexion.setTextColor(requireContext().getColor(R.color.azul_tecnologico))
             }
             is ConexionState.Conectado -> {
                 binding.ivEstadoConexion.setImageResource(R.drawable.ic_connection_on)
-                binding.tvEstadoConexion.text = "Raspberry Pi conectada"
-                binding.tvEstadoConexion.setTextColor(
-                    requireContext().getColor(R.color.verde_exito)
-                )
-                binding.cardEstadoConexion.strokeColor =
-                    requireContext().getColor(R.color.verde_exito)
+                binding.tvDispositivoNombre.text = "Conectada"
+                binding.tvEstadoConexion.text = "Sistema listo para análisis"
+                binding.tvEstadoConexion.setTextColor(requireContext().getColor(R.color.verde_exito))
             }
             is ConexionState.Desconectado -> {
                 binding.ivEstadoConexion.setImageResource(R.drawable.ic_connection_off)
-                binding.tvEstadoConexion.text = "Dispositivo desconectado"
-                binding.tvEstadoConexion.setTextColor(
-                    requireContext().getColor(R.color.error_color)
-                )
-                binding.cardEstadoConexion.strokeColor =
-                    requireContext().getColor(R.color.error_color)
+                binding.tvDispositivoNombre.text = "No conectada"
+                binding.tvEstadoConexion.text = "Dispositivo fuera de línea"
+                binding.tvEstadoConexion.setTextColor(requireContext().getColor(R.color.error_color))
             }
         }
     }
 
-    /** Animaciones de entrada escalonadas para las tarjetas del dashboard */
-    private fun animarTarjetas() {
-        val tarjetas = listOf(
-            binding.cardEstadoConexion,
-            binding.cardRegistrar,
-            binding.cardBaseDatos,
-            binding.cardConfiguracion
-        )
-        tarjetas.forEachIndexed { index, card ->
-            card.alpha = 0f
-            card.animate()
-                .alpha(1f)
-                .translationYBy(-30f)
-                .setStartDelay((index * 120).toLong())
-                .setDuration(400)
-                .start()
-        }
-    }
-
-    private fun mostrarDialogoConfiguracion() {
+    private fun mostrarDialogoCerrarSesion() {
         com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Configuración del Sistema")
-            .setMessage("DrinkSafe Manager v1.0.0\n\nRaspberry Pi IP: 192.168.1.100\nPuerto: 5000\n\nSensor espectral: AS7262\nSensor conductividad: activo\nSensor temperatura: activo")
-            .setPositiveButton("Cerrar", null)
-            .setIcon(R.drawable.ic_settings)
+            .setTitle("Cerrar Sesión")
+            .setMessage("¿Estás seguro de que deseas salir?")
+            .setPositiveButton("Salir") { _, _ ->
+                perfilViewModel.cerrarSesion()
+                findNavController().navigate(R.id.action_splash_to_login)
+            }
+            .setNegativeButton("Cancelar", null)
             .show()
     }
 

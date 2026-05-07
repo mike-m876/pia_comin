@@ -44,6 +44,9 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
   public final Chip chipVodka;
 
   @NonNull
+  public final TextInputEditText etAlcohol;
+
+  @NonNull
   public final TextInputEditText etMarca;
 
   @NonNull
@@ -63,6 +66,9 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
 
   @NonNull
   public final CircularProgressIndicator progressSensores;
+
+  @NonNull
+  public final TextInputLayout tilAlcohol;
 
   @NonNull
   public final TextInputLayout tilMarca;
@@ -85,10 +91,11 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
   private FragmentRegistrarBebidaBinding(@NonNull CoordinatorLayout rootView,
       @NonNull MaterialButton btnRegistrar, @NonNull ChipGroup chipGroupTipo,
       @NonNull Chip chipOtro, @NonNull Chip chipTequila, @NonNull Chip chipVodka,
-      @NonNull TextInputEditText etMarca, @NonNull TextInputEditText etNombre,
-      @NonNull TextInputEditText etNotas, @NonNull ImageView ivSensorIcon,
-      @NonNull LinearLayout layoutFormulario, @NonNull LinearLayout layoutSensores,
-      @NonNull CircularProgressIndicator progressSensores, @NonNull TextInputLayout tilMarca,
+      @NonNull TextInputEditText etAlcohol, @NonNull TextInputEditText etMarca,
+      @NonNull TextInputEditText etNombre, @NonNull TextInputEditText etNotas,
+      @NonNull ImageView ivSensorIcon, @NonNull LinearLayout layoutFormulario,
+      @NonNull LinearLayout layoutSensores, @NonNull CircularProgressIndicator progressSensores,
+      @NonNull TextInputLayout tilAlcohol, @NonNull TextInputLayout tilMarca,
       @NonNull TextInputLayout tilNombre, @NonNull TextInputLayout tilNotas,
       @NonNull MaterialToolbar toolbar, @NonNull TextView tvDescripcionSensor,
       @NonNull TextView tvEstadoSensor) {
@@ -98,6 +105,7 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
     this.chipOtro = chipOtro;
     this.chipTequila = chipTequila;
     this.chipVodka = chipVodka;
+    this.etAlcohol = etAlcohol;
     this.etMarca = etMarca;
     this.etNombre = etNombre;
     this.etNotas = etNotas;
@@ -105,6 +113,7 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
     this.layoutFormulario = layoutFormulario;
     this.layoutSensores = layoutSensores;
     this.progressSensores = progressSensores;
+    this.tilAlcohol = tilAlcohol;
     this.tilMarca = tilMarca;
     this.tilNombre = tilNombre;
     this.tilNotas = tilNotas;
@@ -170,6 +179,12 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.et_alcohol;
+      TextInputEditText etAlcohol = ViewBindings.findChildViewById(rootView, id);
+      if (etAlcohol == null) {
+        break missingId;
+      }
+
       id = R.id.et_marca;
       TextInputEditText etMarca = ViewBindings.findChildViewById(rootView, id);
       if (etMarca == null) {
@@ -212,6 +227,12 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.til_alcohol;
+      TextInputLayout tilAlcohol = ViewBindings.findChildViewById(rootView, id);
+      if (tilAlcohol == null) {
+        break missingId;
+      }
+
       id = R.id.til_marca;
       TextInputLayout tilMarca = ViewBindings.findChildViewById(rootView, id);
       if (tilMarca == null) {
@@ -249,9 +270,9 @@ public final class FragmentRegistrarBebidaBinding implements ViewBinding {
       }
 
       return new FragmentRegistrarBebidaBinding((CoordinatorLayout) rootView, btnRegistrar,
-          chipGroupTipo, chipOtro, chipTequila, chipVodka, etMarca, etNombre, etNotas, ivSensorIcon,
-          layoutFormulario, layoutSensores, progressSensores, tilMarca, tilNombre, tilNotas,
-          toolbar, tvDescripcionSensor, tvEstadoSensor);
+          chipGroupTipo, chipOtro, chipTequila, chipVodka, etAlcohol, etMarca, etNombre, etNotas,
+          ivSensorIcon, layoutFormulario, layoutSensores, progressSensores, tilAlcohol, tilMarca,
+          tilNombre, tilNotas, toolbar, tvDescripcionSensor, tvEstadoSensor);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

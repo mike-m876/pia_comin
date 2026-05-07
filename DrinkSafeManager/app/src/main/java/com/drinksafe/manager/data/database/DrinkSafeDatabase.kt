@@ -5,31 +5,27 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.drinksafe.manager.data.models.Bebida
+import com.drinksafe.manager.data.models.Perfil
 
 /**
  * Clase principal de Room Database para DrinkSafe Manager.
- * Implementa el patrón Singleton para garantizar una única instancia.
  */
 @Database(
-    entities = [Bebida::class],
-    version = 1,
+    entities = [Bebida::class, Perfil::class],
+    version = 5, // Incrementado a 5 para reflejar el nuevo campo syncCode en Bebida
     exportSchema = false
 )
 abstract class DrinkSafeDatabase : RoomDatabase() {
 
     abstract fun bebidaDao(): BebidaDao
+    abstract fun perfilDao(): PerfilDao
 
     companion object {
         private const val DATABASE_NAME = "drinksafe_database"
 
-        // @Volatile garantiza que los cambios sean visibles en todos los hilos
         @Volatile
         private var INSTANCE: DrinkSafeDatabase? = null
 
-        /**
-         * Obtiene la instancia única de la base de datos.
-         * Usa double-checked locking para seguridad en multihilo.
-         */
         fun getInstance(context: Context): DrinkSafeDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(

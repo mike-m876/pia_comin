@@ -4,6 +4,7 @@ package com.drinksafe.manager.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final Button btnGenerarId;
+
+  @NonNull
   public final ImageButton btnRefreshConexion;
 
   @NonNull
@@ -35,6 +39,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final MaterialCardView cardEstadoConexion;
 
   @NonNull
+  public final MaterialCardView cardPerfil;
+
+  @NonNull
   public final MaterialCardView cardRegistrar;
 
   @NonNull
@@ -44,26 +51,42 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final ImageView ivEstadoConexion;
 
   @NonNull
+  public final TextView tvDispositivoNombre;
+
+  @NonNull
   public final TextView tvEstadoConexion;
+
+  @NonNull
+  public final TextView tvIdSync;
+
+  @NonNull
+  public final TextView tvNombreUsuario;
 
   @NonNull
   public final TextView tvTotalBebidas;
 
   private FragmentDashboardBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull ImageButton btnRefreshConexion, @NonNull MaterialCardView cardBaseDatos,
-      @NonNull MaterialCardView cardConfiguracion, @NonNull MaterialCardView cardEstadoConexion,
+      @NonNull Button btnGenerarId, @NonNull ImageButton btnRefreshConexion,
+      @NonNull MaterialCardView cardBaseDatos, @NonNull MaterialCardView cardConfiguracion,
+      @NonNull MaterialCardView cardEstadoConexion, @NonNull MaterialCardView cardPerfil,
       @NonNull MaterialCardView cardRegistrar, @NonNull ImageView ivConfig,
-      @NonNull ImageView ivEstadoConexion, @NonNull TextView tvEstadoConexion,
-      @NonNull TextView tvTotalBebidas) {
+      @NonNull ImageView ivEstadoConexion, @NonNull TextView tvDispositivoNombre,
+      @NonNull TextView tvEstadoConexion, @NonNull TextView tvIdSync,
+      @NonNull TextView tvNombreUsuario, @NonNull TextView tvTotalBebidas) {
     this.rootView = rootView;
+    this.btnGenerarId = btnGenerarId;
     this.btnRefreshConexion = btnRefreshConexion;
     this.cardBaseDatos = cardBaseDatos;
     this.cardConfiguracion = cardConfiguracion;
     this.cardEstadoConexion = cardEstadoConexion;
+    this.cardPerfil = cardPerfil;
     this.cardRegistrar = cardRegistrar;
     this.ivConfig = ivConfig;
     this.ivEstadoConexion = ivEstadoConexion;
+    this.tvDispositivoNombre = tvDispositivoNombre;
     this.tvEstadoConexion = tvEstadoConexion;
+    this.tvIdSync = tvIdSync;
+    this.tvNombreUsuario = tvNombreUsuario;
     this.tvTotalBebidas = tvTotalBebidas;
   }
 
@@ -94,6 +117,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_generar_id;
+      Button btnGenerarId = ViewBindings.findChildViewById(rootView, id);
+      if (btnGenerarId == null) {
+        break missingId;
+      }
+
       id = R.id.btn_refresh_conexion;
       ImageButton btnRefreshConexion = ViewBindings.findChildViewById(rootView, id);
       if (btnRefreshConexion == null) {
@@ -118,6 +147,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.card_perfil;
+      MaterialCardView cardPerfil = ViewBindings.findChildViewById(rootView, id);
+      if (cardPerfil == null) {
+        break missingId;
+      }
+
       id = R.id.card_registrar;
       MaterialCardView cardRegistrar = ViewBindings.findChildViewById(rootView, id);
       if (cardRegistrar == null) {
@@ -136,9 +171,27 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_dispositivo_nombre;
+      TextView tvDispositivoNombre = ViewBindings.findChildViewById(rootView, id);
+      if (tvDispositivoNombre == null) {
+        break missingId;
+      }
+
       id = R.id.tv_estado_conexion;
       TextView tvEstadoConexion = ViewBindings.findChildViewById(rootView, id);
       if (tvEstadoConexion == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_id_sync;
+      TextView tvIdSync = ViewBindings.findChildViewById(rootView, id);
+      if (tvIdSync == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_nombre_usuario;
+      TextView tvNombreUsuario = ViewBindings.findChildViewById(rootView, id);
+      if (tvNombreUsuario == null) {
         break missingId;
       }
 
@@ -148,9 +201,10 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((CoordinatorLayout) rootView, btnRefreshConexion,
-          cardBaseDatos, cardConfiguracion, cardEstadoConexion, cardRegistrar, ivConfig,
-          ivEstadoConexion, tvEstadoConexion, tvTotalBebidas);
+      return new FragmentDashboardBinding((CoordinatorLayout) rootView, btnGenerarId,
+          btnRefreshConexion, cardBaseDatos, cardConfiguracion, cardEstadoConexion, cardPerfil,
+          cardRegistrar, ivConfig, ivEstadoConexion, tvDispositivoNombre, tvEstadoConexion,
+          tvIdSync, tvNombreUsuario, tvTotalBebidas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

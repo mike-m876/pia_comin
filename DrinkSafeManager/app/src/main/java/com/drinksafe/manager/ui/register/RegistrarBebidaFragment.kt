@@ -28,8 +28,8 @@ class RegistrarBebidaFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: BebidaViewModel by activityViewModels {
-        val repo = (requireActivity().application as DrinkSafeApplication).bebidaRepository
-        BebidaViewModel.Factory(repo)
+        val app = (requireActivity().application as DrinkSafeApplication)
+        BebidaViewModel.Factory(app.bebidaRepository, app.perfilRepository)
     }
 
     override fun onCreateView(
@@ -52,11 +52,6 @@ class RegistrarBebidaFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        // Chips de tipo de bebida
-        binding.chipGroupTipo.setOnCheckedStateChangeListener { group, checkedIds ->
-            // El tipo se obtiene del chip seleccionado al momento de registrar
-        }
-
         // Botón de registro
         binding.btnRegistrar.setOnClickListener {
             registrarBebida()
@@ -68,6 +63,8 @@ class RegistrarBebidaFragment : Fragment() {
         val nombre = binding.etNombre.text.toString().trim()
         val marca = binding.etMarca.text.toString().trim()
         val notas = binding.etNotas.text.toString().trim()
+        val alcoholStr = binding.etAlcohol.text.toString().trim()
+        val alcoholManual = alcoholStr.toFloatOrNull()
 
         // Obtener tipo seleccionado del ChipGroup
         val tipo = when (binding.chipGroupTipo.checkedChipId) {
@@ -96,7 +93,7 @@ class RegistrarBebidaFragment : Fragment() {
         }
 
         // Iniciar registro con simulación de sensores
-        viewModel.registrarBebida(nombre, marca, tipo, notas)
+        viewModel.registrarBebida(nombre, marca, tipo, notas, alcoholManual)
     }
 
     /** Observa los cambios de estado del proceso de registro */

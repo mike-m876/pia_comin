@@ -1430,6 +1430,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2269,6 +2273,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3297,12 +3303,16 @@ id action_divider
 id action_image
 id action_listaBebidas_to_detalleBebida
 id action_listaBebidas_to_registrar
+id action_login_to_dashboard
+id action_login_to_register
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_register_to_dashboard
 id action_splash_to_dashboard
+id action_splash_to_login
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3337,7 +3347,17 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
+id btnGoToLogin
+id btnGoToRegister
+id btnLogin
+id btnRegister
 id btn_eliminar
+id btn_generar_id
 id btn_refresh_conexion
 id btn_registrar
 id buttonPanel
@@ -3347,6 +3367,7 @@ id cancel_button
 id card_base_datos
 id card_configuracion
 id card_estado_conexion
+id card_perfil
 id card_registrar
 id carryVelocity
 id center
@@ -3433,6 +3454,9 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id etEmail
+id etPassword
+id etUsername
 id et_buscar
 id et_marca
 id et_nombre
@@ -3489,6 +3513,7 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id ivLogo
 id iv_config
 id iv_estado_conexion
 id iv_icono_bebida
@@ -3517,6 +3542,7 @@ id listMode
 id list_item
 id listaBebidasFragment
 id locale
+id loginFragment
 id ltr
 id m3_side_sheet
 id marquee
@@ -3636,6 +3662,7 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_bar
 id progress_circular
 id progress_horizontal
@@ -3644,6 +3671,7 @@ id radio
 id ratio
 id rectangles
 id recycler_bebidas
+id registerFragment
 id registrarBebidaFragment
 id report_drawn
 id reverseSawtooth
@@ -3784,11 +3812,13 @@ id tv_descripcion_sensor
 id tv_estado_conexion
 id tv_estado_sensor
 id tv_fecha_registro
+id tv_id_sync
 id tv_marca
 id tv_marca_bebida
 id tv_nombre
 id tv_nombre_app
 id tv_nombre_bebida
+id tv_nombre_usuario
 id tv_notas
 id tv_subtitulo
 id tv_temp
@@ -3936,6 +3966,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3955,6 +3987,8 @@ layout design_text_input_start_icon
 layout fragment_dashboard
 layout fragment_detalle_bebida
 layout fragment_lista_bebidas
+layout fragment_login
+layout fragment_register
 layout fragment_registrar_bebida
 layout fragment_splash
 layout ime_base_split_test_activity
@@ -4104,6 +4138,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
 string dashboard_subtitulo
 string dashboard_titulo
 string datos_espectrales
@@ -4120,6 +4155,9 @@ string estado_verificando
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -5557,3 +5595,4 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml ga_ad_services_config
+xml image_share_filepaths

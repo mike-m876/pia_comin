@@ -1,30 +1,54 @@
 [
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/activity_main.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_splash.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/fragment_lista_bebidas.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/fragment_lista_bebidas.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_lista_bebidas.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_lista_bebidas.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/fragment_detalle_bebida.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/fragment_detalle_bebida.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\item_bebida.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\item_bebida.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/fragment_dashboard.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_detalle_bebida.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_detalle_bebida.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/fragment_registrar_bebida.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/fragment_registrar_bebida.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/fragment_splash.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/fragment_splash.xml"
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-61:/layout/fragment_detalle_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-64:/layout/fragment_detalle_bebida.xml"
     },
     {
-        "merged": "com.drinksafe.manager.app-mergeDebugResources-60:/layout/item_bebida.xml",
-        "source": "com.drinksafe.manager.app-main-63:/layout/item_bebida.xml"
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-61:/layout/fragment_lista_bebidas.xml",
+        "source": "com.drinksafe.manager.app-main-64:/layout/fragment_lista_bebidas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_registrar_bebida.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_registrar_bebida.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-61:/layout/fragment_registrar_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-64:/layout/fragment_registrar_bebida.xml"
+    },
+    {
+        "merged": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-mergeDebugResources-61:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\Leona\\.gradle\\daemon\\8.5\\com.drinksafe.manager.app-main-64:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.drinksafe.manager.app-mergeDebugResources-61:/layout/item_bebida.xml",
+        "source": "com.drinksafe.manager.app-main-64:/layout/item_bebida.xml"
     }
 ]

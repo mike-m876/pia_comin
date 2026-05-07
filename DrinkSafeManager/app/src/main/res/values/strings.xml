@@ -23,6 +23,7 @@
     <string name="registrar_titulo">Registrar bebida</string>
     <string name="campo_nombre">Nombre de la bebida</string>
     <string name="campo_marca">Marca o fabricante</string>
+    <string name="campo_alcohol">Grados de alcohol (% vol)</string>
     <string name="campo_notas">Notas adicionales (opcional)</string>
     <string name="btn_registrar">Registrar bebida</string>
     <string name="sensor_leyendo">Leyendo sensores…</string>

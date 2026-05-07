@@ -9,6 +9,7 @@ import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -41,28 +42,32 @@ public final class BebidaDao_Impl implements BebidaDao {
 
   private final EntityDeletionOrUpdateAdapter<Bebida> __updateAdapterOfBebida;
 
+  private final SharedSQLiteStatement __preparedStmtOfActualizarSyncCodeMasivo;
+
   public BebidaDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfBebida = new EntityInsertionAdapter<Bebida>(__db) {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `bebidas` (`id`,`nombre`,`marca`,`tipo`,`fechaRegistro`,`datosEspectrales`,`conductividad`,`temperatura`,`alcoholEstimado`,`notas`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `bebidas` (`id`,`userId`,`syncCode`,`nombre`,`marca`,`tipo`,`fechaRegistro`,`datosEspectrales`,`conductividad`,`temperatura`,`alcoholEstimado`,`notas`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           @NonNull final Bebida entity) {
         statement.bindLong(1, entity.getId());
-        statement.bindString(2, entity.getNombre());
-        statement.bindString(3, entity.getMarca());
-        statement.bindString(4, entity.getTipo());
-        statement.bindString(5, entity.getFechaRegistro());
-        statement.bindString(6, entity.getDatosEspectrales());
-        statement.bindDouble(7, entity.getConductividad());
-        statement.bindDouble(8, entity.getTemperatura());
-        statement.bindDouble(9, entity.getAlcoholEstimado());
-        statement.bindString(10, entity.getNotas());
+        statement.bindString(2, entity.getUserId());
+        statement.bindString(3, entity.getSyncCode());
+        statement.bindString(4, entity.getNombre());
+        statement.bindString(5, entity.getMarca());
+        statement.bindString(6, entity.getTipo());
+        statement.bindString(7, entity.getFechaRegistro());
+        statement.bindString(8, entity.getDatosEspectrales());
+        statement.bindDouble(9, entity.getConductividad());
+        statement.bindDouble(10, entity.getTemperatura());
+        statement.bindDouble(11, entity.getAlcoholEstimado());
+        statement.bindString(12, entity.getNotas());
       }
     };
     this.__deletionAdapterOfBebida = new EntityDeletionOrUpdateAdapter<Bebida>(__db) {
@@ -82,23 +87,33 @@ public final class BebidaDao_Impl implements BebidaDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `bebidas` SET `id` = ?,`nombre` = ?,`marca` = ?,`tipo` = ?,`fechaRegistro` = ?,`datosEspectrales` = ?,`conductividad` = ?,`temperatura` = ?,`alcoholEstimado` = ?,`notas` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `bebidas` SET `id` = ?,`userId` = ?,`syncCode` = ?,`nombre` = ?,`marca` = ?,`tipo` = ?,`fechaRegistro` = ?,`datosEspectrales` = ?,`conductividad` = ?,`temperatura` = ?,`alcoholEstimado` = ?,`notas` = ? WHERE `id` = ?";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           @NonNull final Bebida entity) {
         statement.bindLong(1, entity.getId());
-        statement.bindString(2, entity.getNombre());
-        statement.bindString(3, entity.getMarca());
-        statement.bindString(4, entity.getTipo());
-        statement.bindString(5, entity.getFechaRegistro());
-        statement.bindString(6, entity.getDatosEspectrales());
-        statement.bindDouble(7, entity.getConductividad());
-        statement.bindDouble(8, entity.getTemperatura());
-        statement.bindDouble(9, entity.getAlcoholEstimado());
-        statement.bindString(10, entity.getNotas());
-        statement.bindLong(11, entity.getId());
+        statement.bindString(2, entity.getUserId());
+        statement.bindString(3, entity.getSyncCode());
+        statement.bindString(4, entity.getNombre());
+        statement.bindString(5, entity.getMarca());
+        statement.bindString(6, entity.getTipo());
+        statement.bindString(7, entity.getFechaRegistro());
+        statement.bindString(8, entity.getDatosEspectrales());
+        statement.bindDouble(9, entity.getConductividad());
+        statement.bindDouble(10, entity.getTemperatura());
+        statement.bindDouble(11, entity.getAlcoholEstimado());
+        statement.bindString(12, entity.getNotas());
+        statement.bindLong(13, entity.getId());
+      }
+    };
+    this.__preparedStmtOfActualizarSyncCodeMasivo = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "UPDATE bebidas SET syncCode = ? WHERE userId = ?";
+        return _query;
       }
     };
   }
@@ -158,9 +173,39 @@ public final class BebidaDao_Impl implements BebidaDao {
   }
 
   @Override
-  public Flow<List<Bebida>> obtenerTodas() {
-    final String _sql = "SELECT * FROM bebidas ORDER BY id DESC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+  public Object actualizarSyncCodeMasivo(final String userId, final String nuevoSyncCode,
+      final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfActualizarSyncCodeMasivo.acquire();
+        int _argIndex = 1;
+        _stmt.bindString(_argIndex, nuevoSyncCode);
+        _argIndex = 2;
+        _stmt.bindString(_argIndex, userId);
+        try {
+          __db.beginTransaction();
+          try {
+            _stmt.executeUpdateDelete();
+            __db.setTransactionSuccessful();
+            return Unit.INSTANCE;
+          } finally {
+            __db.endTransaction();
+          }
+        } finally {
+          __preparedStmtOfActualizarSyncCodeMasivo.release(_stmt);
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Flow<List<Bebida>> obtenerTodasPorUsuario(final String userId) {
+    final String _sql = "SELECT * FROM bebidas WHERE userId = ? ORDER BY id DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, userId);
     return CoroutinesRoom.createFlow(__db, false, new String[] {"bebidas"}, new Callable<List<Bebida>>() {
       @Override
       @NonNull
@@ -168,6 +213,8 @@ public final class BebidaDao_Impl implements BebidaDao {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
+          final int _cursorIndexOfSyncCode = CursorUtil.getColumnIndexOrThrow(_cursor, "syncCode");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfMarca = CursorUtil.getColumnIndexOrThrow(_cursor, "marca");
           final int _cursorIndexOfTipo = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo");
@@ -182,6 +229,10 @@ public final class BebidaDao_Impl implements BebidaDao {
             final Bebida _item;
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpUserId;
+            _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+            final String _tmpSyncCode;
+            _tmpSyncCode = _cursor.getString(_cursorIndexOfSyncCode);
             final String _tmpNombre;
             _tmpNombre = _cursor.getString(_cursorIndexOfNombre);
             final String _tmpMarca;
@@ -200,7 +251,7 @@ public final class BebidaDao_Impl implements BebidaDao {
             _tmpAlcoholEstimado = _cursor.getFloat(_cursorIndexOfAlcoholEstimado);
             final String _tmpNotas;
             _tmpNotas = _cursor.getString(_cursorIndexOfNotas);
-            _item = new Bebida(_tmpId,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
+            _item = new Bebida(_tmpId,_tmpUserId,_tmpSyncCode,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
             _result.add(_item);
           }
           return _result;
@@ -217,11 +268,14 @@ public final class BebidaDao_Impl implements BebidaDao {
   }
 
   @Override
-  public Object obtenerPorId(final int id, final Continuation<? super Bebida> $completion) {
-    final String _sql = "SELECT * FROM bebidas WHERE id = ?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+  public Object obtenerPorId(final int id, final String userId,
+      final Continuation<? super Bebida> $completion) {
+    final String _sql = "SELECT * FROM bebidas WHERE id = ? AND userId = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, id);
+    _argIndex = 2;
+    _statement.bindString(_argIndex, userId);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
     return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<Bebida>() {
       @Override
@@ -230,6 +284,8 @@ public final class BebidaDao_Impl implements BebidaDao {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
+          final int _cursorIndexOfSyncCode = CursorUtil.getColumnIndexOrThrow(_cursor, "syncCode");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfMarca = CursorUtil.getColumnIndexOrThrow(_cursor, "marca");
           final int _cursorIndexOfTipo = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo");
@@ -243,6 +299,10 @@ public final class BebidaDao_Impl implements BebidaDao {
           if (_cursor.moveToFirst()) {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpUserId;
+            _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+            final String _tmpSyncCode;
+            _tmpSyncCode = _cursor.getString(_cursorIndexOfSyncCode);
             final String _tmpNombre;
             _tmpNombre = _cursor.getString(_cursorIndexOfNombre);
             final String _tmpMarca;
@@ -261,7 +321,7 @@ public final class BebidaDao_Impl implements BebidaDao {
             _tmpAlcoholEstimado = _cursor.getFloat(_cursorIndexOfAlcoholEstimado);
             final String _tmpNotas;
             _tmpNotas = _cursor.getString(_cursorIndexOfNotas);
-            _result = new Bebida(_tmpId,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
+            _result = new Bebida(_tmpId,_tmpUserId,_tmpSyncCode,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
           } else {
             _result = null;
           }
@@ -275,9 +335,11 @@ public final class BebidaDao_Impl implements BebidaDao {
   }
 
   @Override
-  public Flow<Integer> contarBebidas() {
-    final String _sql = "SELECT COUNT(*) FROM bebidas";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+  public Flow<Integer> contarBebidas(final String userId) {
+    final String _sql = "SELECT COUNT(*) FROM bebidas WHERE userId = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, userId);
     return CoroutinesRoom.createFlow(__db, false, new String[] {"bebidas"}, new Callable<Integer>() {
       @Override
       @NonNull
@@ -306,12 +368,14 @@ public final class BebidaDao_Impl implements BebidaDao {
   }
 
   @Override
-  public Flow<List<Bebida>> buscar(final String query) {
-    final String _sql = "SELECT * FROM bebidas WHERE nombre LIKE '%' || ? || '%' OR marca LIKE '%' || ? || '%' ORDER BY id DESC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+  public Flow<List<Bebida>> buscar(final String userId, final String query) {
+    final String _sql = "SELECT * FROM bebidas WHERE userId = ? AND (nombre LIKE '%' || ? || '%' OR marca LIKE '%' || ? || '%') ORDER BY id DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 3);
     int _argIndex = 1;
-    _statement.bindString(_argIndex, query);
+    _statement.bindString(_argIndex, userId);
     _argIndex = 2;
+    _statement.bindString(_argIndex, query);
+    _argIndex = 3;
     _statement.bindString(_argIndex, query);
     return CoroutinesRoom.createFlow(__db, false, new String[] {"bebidas"}, new Callable<List<Bebida>>() {
       @Override
@@ -320,6 +384,8 @@ public final class BebidaDao_Impl implements BebidaDao {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
+          final int _cursorIndexOfSyncCode = CursorUtil.getColumnIndexOrThrow(_cursor, "syncCode");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfMarca = CursorUtil.getColumnIndexOrThrow(_cursor, "marca");
           final int _cursorIndexOfTipo = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo");
@@ -334,6 +400,10 @@ public final class BebidaDao_Impl implements BebidaDao {
             final Bebida _item;
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpUserId;
+            _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+            final String _tmpSyncCode;
+            _tmpSyncCode = _cursor.getString(_cursorIndexOfSyncCode);
             final String _tmpNombre;
             _tmpNombre = _cursor.getString(_cursorIndexOfNombre);
             final String _tmpMarca;
@@ -352,7 +422,7 @@ public final class BebidaDao_Impl implements BebidaDao {
             _tmpAlcoholEstimado = _cursor.getFloat(_cursorIndexOfAlcoholEstimado);
             final String _tmpNotas;
             _tmpNotas = _cursor.getString(_cursorIndexOfNotas);
-            _item = new Bebida(_tmpId,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
+            _item = new Bebida(_tmpId,_tmpUserId,_tmpSyncCode,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
             _result.add(_item);
           }
           return _result;
@@ -369,10 +439,12 @@ public final class BebidaDao_Impl implements BebidaDao {
   }
 
   @Override
-  public Flow<List<Bebida>> obtenerPorTipo(final String tipo) {
-    final String _sql = "SELECT * FROM bebidas WHERE tipo = ? ORDER BY id DESC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+  public Flow<List<Bebida>> obtenerPorTipo(final String userId, final String tipo) {
+    final String _sql = "SELECT * FROM bebidas WHERE userId = ? AND tipo = ? ORDER BY id DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
+    _statement.bindString(_argIndex, userId);
+    _argIndex = 2;
     _statement.bindString(_argIndex, tipo);
     return CoroutinesRoom.createFlow(__db, false, new String[] {"bebidas"}, new Callable<List<Bebida>>() {
       @Override
@@ -381,6 +453,8 @@ public final class BebidaDao_Impl implements BebidaDao {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
+          final int _cursorIndexOfSyncCode = CursorUtil.getColumnIndexOrThrow(_cursor, "syncCode");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "nombre");
           final int _cursorIndexOfMarca = CursorUtil.getColumnIndexOrThrow(_cursor, "marca");
           final int _cursorIndexOfTipo = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo");
@@ -395,6 +469,10 @@ public final class BebidaDao_Impl implements BebidaDao {
             final Bebida _item;
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpUserId;
+            _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+            final String _tmpSyncCode;
+            _tmpSyncCode = _cursor.getString(_cursorIndexOfSyncCode);
             final String _tmpNombre;
             _tmpNombre = _cursor.getString(_cursorIndexOfNombre);
             final String _tmpMarca;
@@ -413,7 +491,7 @@ public final class BebidaDao_Impl implements BebidaDao {
             _tmpAlcoholEstimado = _cursor.getFloat(_cursorIndexOfAlcoholEstimado);
             final String _tmpNotas;
             _tmpNotas = _cursor.getString(_cursorIndexOfNotas);
-            _item = new Bebida(_tmpId,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
+            _item = new Bebida(_tmpId,_tmpUserId,_tmpSyncCode,_tmpNombre,_tmpMarca,_tmpTipo,_tmpFechaRegistro,_tmpDatosEspectrales,_tmpConductividad,_tmpTemperatura,_tmpAlcoholEstimado,_tmpNotas);
             _result.add(_item);
           }
           return _result;

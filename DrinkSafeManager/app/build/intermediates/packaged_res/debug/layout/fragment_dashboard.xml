@@ -55,6 +55,88 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Sección: Perfil y Sincronización -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil de Usuario"
+                android:textSize="13sp"
+                android:textColor="@color/texto_secundario"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blanco"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_settings"
+                            app:tint="@color/azul_oscuro" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_nombre_usuario"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Usuario DrinkSafe"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/azul_oscuro" />
+
+                            <TextView
+                                android:id="@+id/tv_id_sync"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID Sync: ----"
+                                android:textSize="14sp"
+                                android:textColor="@color/azul_tecnologico"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_generar_id"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Generar ID" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Usa este ID en tu Raspberry Pi para sincronizar el acceso."
+                        android:textSize="12sp"
+                        android:textColor="@color/texto_secundario"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <!-- Saludo -->
             <TextView
                 android:layout_width="wrap_content"
@@ -133,7 +215,7 @@
                         android:src="@drawable/ic_refresh"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="Actualizar conexión"
-                        android:tint="@color/azul_tecnologico" />
+                        app:tint="@color/azul_tecnologico" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -178,7 +260,7 @@
                             android:layout_height="28dp"
                             android:src="@drawable/ic_add_drink"
                             android:contentDescription="Agregar bebida"
-                            android:tint="@color/blanco" />
+                            app:tint="@color/blanco" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -210,7 +292,7 @@
                         android:layout_height="20dp"
                         android:src="@drawable/ic_arrow_right"
                         android:contentDescription="Ir"
-                        android:tint="@color/texto_secundario" />
+                        app:tint="@color/texto_secundario" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -244,7 +326,7 @@
                             android:layout_height="28dp"
                             android:src="@drawable/ic_database"
                             android:contentDescription="Base de datos"
-                            android:tint="@color/blanco" />
+                            app:tint="@color/blanco" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -276,7 +358,7 @@
                         android:layout_height="20dp"
                         android:src="@drawable/ic_arrow_right"
                         android:contentDescription="Ir"
-                        android:tint="@color/texto_secundario" />
+                        app:tint="@color/texto_secundario" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -311,7 +393,7 @@
                             android:layout_height="28dp"
                             android:src="@drawable/ic_settings"
                             android:contentDescription="Configuración"
-                            android:tint="@color/blanco" />
+                            app:tint="@color/blanco" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -343,7 +425,7 @@
                         android:layout_height="20dp"
                         android:src="@drawable/ic_arrow_right"
                         android:contentDescription="Ir"
-                        android:tint="@color/texto_secundario" />
+                        app:tint="@color/texto_secundario" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

@@ -24,8 +24,8 @@ class ListaBebidasFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: BebidaViewModel by activityViewModels {
-        val repo = (requireActivity().application as DrinkSafeApplication).bebidaRepository
-        BebidaViewModel.Factory(repo)
+        val app = (requireActivity().application as DrinkSafeApplication)
+        BebidaViewModel.Factory(app.bebidaRepository, app.perfilRepository)
     }
 
     private lateinit var adapter: BebidaAdapter
